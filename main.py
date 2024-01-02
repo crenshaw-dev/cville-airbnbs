@@ -1,6 +1,8 @@
 import csv
 import json
+import operator
 import time
+import traceback
 
 import requests
 
@@ -103,7 +105,7 @@ def get_request_body(rect: Rectangle):
                            'sha256Hash': '81c26682ee29edbbf0cd22db48b9b01b5686c4cb43f2c98758395a0cdac50700'}}}
 
 
-def data_from_response(r: requests.Response):
+def data_from_response(r: requests.Response) -> dict[str, dict[str, str]]:
     r_json = r.json()
     try:
         results = r_json["data"]["presentation"]["staysSearch"]["results"]
@@ -115,7 +117,8 @@ def data_from_response(r: requests.Response):
                 "type": result["listing"]["roomTypeCategory"],
                 "title": result["listing"]["name"],
                 "id": result["listing"]["id"],
-                "hostId": result["listing"]["primaryHostPassport"]["userId"] if result["listing"]["primaryHostPassport"] is not None else None,
+                "hostId": result["listing"]["primaryHostPassport"]["userId"] if "primaryHostPassport" in result[
+                    "listing"] and result["listing"]["primaryHostPassport"] is not None else "",
             }
             for result in results["searchResults"]
             if "listing" in result and result["listing"]["city"] == "Charlottesville"
@@ -127,6 +130,7 @@ def data_from_response(r: requests.Response):
             next_page_cursor = None
     except KeyError:
         print("Unexpected JSON format:")
+        print(traceback.format_exc())
         print(json.dumps(r_json))
         exit(1)
 
@@ -137,11 +141,11 @@ def data_from_response(r: requests.Response):
 # actually 4 rectangles. I need a better name for this variable.
 subdivisions = 2
 
-data = {}
+data: dict[str, dict[str, str]] = {}
 
 n = 1
 for rect in get_rectangle_subdivisions(rectangle_around_cville, subdivisions):
-    print(f"on rect {n} of {subdivisions**2}")
+    print(f"on rect {n} of {subdivisions ** 2}")
     n += 1
     r = requests.post(url, json=get_request_body(rect), headers=headers)
     first_data, next_page_cursor = data_from_response(r)
@@ -158,14 +162,43 @@ for rect in get_rectangle_subdivisions(rectangle_around_cville, subdivisions):
         print("sleeping a sec")
         time.sleep(0.5)
 
+CSV_ROWS = ["id", "hostId", "lat", "lon", "type", "title", "active", "address"]
+
+for k in data:
+    # Mark everything from the API response as active
+    data[k]["active"] = "true"
+    # Give everything from the API an empty address (we'll use the one from the CSV if it's there).
+    data[k]["address"] = ""
+    # Remove newlines from the title.
+    data[k]["title"].replace("\\n", " ")
+
+# Load in existing CSV.
+with open('data.csv', encoding='utf-8', newline='') as old_data:
+    reader = csv.DictReader(old_data)
+    for row in reader:
+        # It's important to convert the listing ID to a string, because that's the way the API loads it.
+        row["id"] = str(row["id"])
+        listing_id = row["id"]
+        if listing_id in data:
+            # The item in this row exists in the data we just pulled from the API, so we'll consider this listing active
+            row["active"] = "true"
+            # Also update the title, in case that has changed.
+            row["title"] = data[listing_id]["title"]
+            # For all other columns, we'll keep the original values. This allows us to, for example, add addresses and
+            # more accurate lat/lon data without it being overwritten on the next update.
+
+        else:
+            # The listing was in the CSV, but not in the API responses. Mark it as inactive.
+            row["active"] = "false"
+        # Either add or update the data from the API with the data from the CSV.
+        data[listing_id] = row
+
 # Sort by listing ID, so we get a somewhat deterministic output.
-data = sorted(data.values(), key=lambda x: x["id"])
 # Most listings don't have a host, but still sort by those first in case it exists.
-data = sorted(data, key=lambda x: x["hostId"] if x["hostId"] is not None else 'a')
+list_data = sorted(data.values(), key=operator.itemgetter("id", "hostId"))
 
 with open('data.csv', 'w', encoding='utf-8', newline='') as f:
     w = csv.writer(f)
-    w.writerow(["id", "hostId", "lat", "lon", "type", "title"])
-    for d in data:
-        w.writerow([d["id"], d["hostId"], d["lat"], d["lon"], d["type"], d["title"]])
-
+    w.writerow(CSV_ROWS)
+    for d in list_data:
+        w.writerow([d["id"], d["hostId"], d["lat"], d["lon"], d["type"], d["title"], d["active"], d["address"]])
