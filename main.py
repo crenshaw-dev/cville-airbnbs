@@ -162,13 +162,14 @@ for rect in get_rectangle_subdivisions(rectangle_around_cville, subdivisions):
         print("sleeping a sec")
         time.sleep(0.5)
 
-CSV_ROWS = ["id", "hostId", "lat", "lon", "type", "title", "active", "address"]
+CSV_ROWS = ["id", "hostId", "lat", "lon", "type", "title", "active", "street number", "street name"]
 
 for k in data:
     # Mark everything from the API response as active
     data[k]["active"] = "true"
     # Give everything from the API an empty address (we'll use the one from the CSV if it's there).
-    data[k]["address"] = ""
+    data[k]["street number"] = ""
+    data[k]["street name"] = ""
     # Remove newlines from the title.
     data[k]["title"].replace("\\n", " ")
 
@@ -201,4 +202,4 @@ with open('data.csv', 'w', encoding='utf-8', newline='') as f:
     w = csv.writer(f)
     w.writerow(CSV_ROWS)
     for d in list_data:
-        w.writerow([d["id"], d["hostId"], d["lat"], d["lon"], d["type"], d["title"], d["active"], d["address"]])
+        w.writerow([d["id"], d["hostId"], d["lat"], d["lon"], d["type"], d["title"], d["active"], d["street number"], d["street name"]])
