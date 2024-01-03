@@ -16,6 +16,8 @@ filtering on the rough rectangle around Charlottesville and then filtering by ci
 The coordinates from Airbnb are obfuscated. Where possible, I manually inspect the Airbnb listing and try to find an
 address. Where I find an address, I also update the coordinates.
 
+Many of the addresses were copied from [Erin's CSV](https://github.com/erinleeryan/cville_airbnb/blob/fe5500c2c9236623e7ba0f8094731cdcd5f51811/data/cville_airbnb_locations.csv).
+
 The script is designed to preserve the manually updated coordinates and address.
 
 Listings come and go from the API results. Where the `active` column contains `true`, the most recent API scrape
