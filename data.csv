@@ -3,7 +3,7 @@ id,hostId,lat,lon,type,title,active,street number,street name
 1006153501856304492,,38.06716585135229,-78.50235103608019,entire_home,Entire house close to UVA-Scott stadium & barrack,true,93,Biltmore Drive
 1007942490771431798,12526301,38.0232093,-78.4591324,private_room,A Quiet Room of Your Own,false,1704,Market St E
 1018757806893288124,160726034,38.067589584003926,-78.50293305418897,private_room,Master King bedroom/P-bathroom,true,99,Biltmore Drive
-1020362793425373820,,38.02804107043091,-78.48970291410158,entire_home,Great Location,true,,405 5th St SW
+1020362793425373820,,38.02804107043091,-78.48970291410158,entire_home,Great Location,true,405,5th St SW
 1025402419480231876,,38.02423270656678,-78.4774767864233,entire_home,Home in Belmont,true,,
 1028261869280662256,,38.03996708122524,-78.500692139258,shared_room,Lovely comfy room near UVA,true,,
 1028482460271712262,,38.01896247022697,-78.47115358593851,entire_home,Townhouse 3 bedroom unit,true,104,Waterbury Court
