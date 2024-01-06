@@ -1,8 +1,8 @@
 id,hostId,lat,lon,type,title,active,street number,street name
 1006078189470657992,,38.05876662019509,-78.49060191830371,entire_home,"4 Mins to UVA Grounds, Peaceful 3BR House",true,,
-1006153501856304492,,38.06716585135229,-78.50235103608019,entire_home,Entire house close to UVA-Scott stadium & barrack,true,93,Biltmore Drive
+1006153501856304492,,38.06716585135229,-78.50235103608019,entire_home,Entire house close to UVA-Scott stadium & barrack,true,93,Biltmore Dr
 1007942490771431798,12526301,38.0232093,-78.4591324,private_room,A Quiet Room of Your Own,true,1704,Market St E
-1018757806893288124,160726034,38.067589584003926,-78.50293305418897,private_room,Master King bedroom/P-bathroom,true,99,Biltmore Drive
+1018757806893288124,160726034,38.067589584003926,-78.50293305418897,private_room,Master King bedroom/P-bathroom,true,99,Biltmore Dr
 1020362793425373820,,38.02804107043091,-78.48970291410158,entire_home,Great Location,false,405,5th St SW
 1025402419480231876,,38.02423270656678,-78.4774767864233,entire_home,Home in Belmont,true,,
 1028261869280662256,,38.03996708122524,-78.500692139258,shared_room,Lovely comfy room near UVA,true,,
@@ -12,65 +12,65 @@ id,hostId,lat,lon,type,title,active,street number,street name
 1037609217915441536,,38.02687,-78.51849,entire_home,"The Nook at UVa- alumni, parents, game fans!",false,,
 1038492888505731204,434917982,38.02303733344418,-78.51769181973651,private_room,10 Minute Walk to UVA Campus & UVA Hospital Room E,true,,
 1038580886894804269,434917982,38.02171253910557,-78.51731898137515,private_room,10 Minute Walk to UVA Campus & UVA Hospital Room F,true,,
-1039224589904816833,,38.02325039054416,-78.49054260068665,entire_home,Apt 3 in Historical Building w/Mountain Views,true,752,Ridge Street
+1039224589904816833,,38.02325039054416,-78.49054260068665,entire_home,Apt 3 in Historical Building w/Mountain Views,true,752,Ridge St
 1055005861744581944,,38.026597765556396,-78.48613869830626,entire_home,Historic Home in Downtown Cville,false,,
 1055392521678470008,,38.02381004425325,-78.47939904644979,entire_home,Charming 2BR Apt near Pavilion,true,,
 1061883191529254227,,38.035621729353416,-78.49506035509039,private_room,"Private Bedroom, Easy Walk to UVA",true,,
-10710588,55351778,38.01837864336701,-78.49515223707957,private_room,Comfortable & Convenient in Cville,true,1017,Ridge Street
-10983225,,38.021415235027,-78.47629440744862,entire_home,Cozy Cottage minutes from downtown!,true,907,Blenheim Avenue
-11094566,,38.03617005294272,-78.49043197869314,entire_home,Downtown Pool House. Walk Downtown and to UVA,true,,9th Street NW
-11143292,,38.01712904423486,-78.49315566301281,entire_home,"Large, Bright, Open Concept Home for Big Groups",true,931,Raymond Road
+10710588,55351778,38.01837864336701,-78.49515223707957,private_room,Comfortable & Convenient in Cville,true,1017,Ridge St
+10983225,,38.021415235027,-78.47629440744862,entire_home,Cozy Cottage minutes from downtown!,true,907,Blenheim Ave
+11094566,,38.03617005294272,-78.49043197869314,entire_home,Downtown Pool House. Walk Downtown and to UVA,true,,9th St NW
+11143292,,38.01712904423486,-78.49315566301281,entire_home,"Large, Bright, Open Concept Home for Big Groups",true,931,Raymond Rd
 1138005,6226940,38.04309,-78.46047,private_room,Woodside Downtown Charlottesville Retreat,true,,
-11557016,55351778,38.01837864336701,-78.49515223707957,private_room,Cozy and Convenient in Cville,true,1017,Ridge Street
+11557016,55351778,38.01837864336701,-78.49515223707957,private_room,Cozy and Convenient in Cville,true,1017,Ridge St
 1186869,,38.03997,-78.49211,entire_home,Do Drop Inn - charming 2BR bungalow,true,,
-11926883,,38.01832592858433,-78.49304243813778,entire_home,"Bright, Spacious Home Perfect for Groups (5 Beds)",true,913,Raymond Road
-12056699,,38.02146697442968,-78.50068198006933,private_room,Large studio/private entrance. Walk to UVA.,true,110,Elkhorn Road
-12125053,,38.033430632325725,-78.47960764554094,private_room,Cope Foster - King Room Downtown Cville!,true,409,2nd Street NE
+11926883,,38.01832592858433,-78.49304243813778,entire_home,"Bright, Spacious Home Perfect for Groups (5 Beds)",true,913,Raymond Rd
+12056699,,38.02146697442968,-78.50068198006933,private_room,Large studio/private entrance. Walk to UVA.,true,110,Elkhorn Rd
+12125053,,38.033430632325725,-78.47960764554094,private_room,Cope Foster - King Room Downtown Cville!,true,409,2nd St NE
 12339369,,38.0465,-78.5008,entire_home,"Walk to UVA, Athletics, Shopping",true,,
-13058472,,38.03133215349232,-78.48247093904051,hotel_room,Townsman Hotel | Poe Room,true,211,W Main Street
-13058517,,38.03133215349232,-78.48247093904051,hotel_room,Townsman Hotel | Meriwether Room,false,211,W Main Street
-13058556,,38.03133215349232,-78.48247093904051,hotel_room,Townsman Hotel | Secretariat Room,true,211,W Main Street
-13058593,,38.03133215349232,-78.48247093904051,hotel_room,Townsman Hotel | Faulkner Room,true,211,W Main Street
+13058472,,38.03133215349232,-78.48247093904051,hotel_room,Townsman Hotel | Poe Room,true,211,W Main St
+13058517,,38.03133215349232,-78.48247093904051,hotel_room,Townsman Hotel | Meriwether Room,false,211,W Main St
+13058556,,38.03133215349232,-78.48247093904051,hotel_room,Townsman Hotel | Secretariat Room,true,211,W Main St
+13058593,,38.03133215349232,-78.48247093904051,hotel_room,Townsman Hotel | Faulkner Room,true,211,W Main St
 1334381,,38.04048,-78.46498,entire_home,Bright Private apt (Separate entrance) near DT,false,,
-13544918,,38.031089414589594,-78.46412329841641,entire_home,2br/2ba Sunny Contemporary Cottage. Walkable!,false,518,Meade Avenue
+13544918,,38.031089414589594,-78.46412329841641,entire_home,2br/2ba Sunny Contemporary Cottage. Walkable!,false,518,Meade Ave
 13680171,,38.02414,-78.47544,entire_home,"Beautiful Belmont Apartment, 
-Walk Everywhere!!",true,700,Graves Street
+Walk Everywhere!!",true,700,Graves St
 13715759,,38.06308,-78.50333,entire_home,Terrace apartment with separate entrance.,false,,
-13743664,,38.019652113115825,-78.4840846375656,entire_home,"Cozy Stonehenge Cottage:Work,Family&Dog Friendly",true,632,Stonehenge Avenue
-13890978,,38.02526156976197,-78.47827789770787,entire_home,"HISTORIC ""BELMONT HOUSE""  near the  Downtown Mall",true,520,Avon Street
+13743664,,38.019652113115825,-78.4840846375656,entire_home,"Cozy Stonehenge Cottage:Work,Family&Dog Friendly",true,632,Stonehenge Ave
+13890978,,38.02526156976197,-78.47827789770787,entire_home,"HISTORIC ""BELMONT HOUSE""  near the  Downtown Mall",true,520,Avon St
 13951613,,38.03494119548507,-78.48331199386513,entire_home,Downtown Cottage Walk to the Mall!,true,,
 14074923,84566628,38.07076,-78.49411,private_room,Sylvicka's Place-owner Sylvia Cechova,true,,
 14216931,82268357,38.02593,-78.47788,private_room,Belmont House  Double Bedroom - Downtown Mall,true,,
 14393956,82268357,38.0246,-78.47793,private_room,"Historic Belmont House - downtown mall ""Kingsize""",true,,
-14394002,82268357,38.02531751585741,-78.47825417352477,private_room,Historic Belmont House downtown - Queen bedroom,true,520,Avon Street
+14394002,82268357,38.02531751585741,-78.47825417352477,private_room,Historic Belmont House downtown - Queen bedroom,true,520,Avon St
 14397945,82268357,38.02424,-78.47785,private_room,Historic Downtown Belmont Special  two room offer!,true,,
-14932235,,38.028908861968425,-78.49625590949815,entire_home,Blue Bungalow | Renovated 1890`s Farmhouse,true,917,Cherry Avenue
+14932235,,38.028908861968425,-78.49625590949815,entire_home,Blue Bungalow | Renovated 1890`s Farmhouse,true,917,Cherry Ave
 14982635,,38.03281,-78.47176,entire_home,Charming bungalow 3 blocks from the Downtown Mall,true,,
 15038321,,38.04769,-78.48765,entire_home,Apartment on Oxford Road - UVA walkable & Quiet!,true,,
-15039876,,38.04569662206521,-78.46190800599491,entire_home,Mosaic Villa For 6 With A View,true,1111,Holmes Avenue
+15039876,,38.04569662206521,-78.46190800599491,entire_home,Mosaic Villa For 6 With A View,true,1111,Holmes Ave
 15278354,,38.02282,-78.47236,entire_home,Beautiful Sunny Clean House In Charlottesville VA,true,,
 15309817,17274235,38.01568,-78.50015,private_room,Master Bed Room with King Bed(Near UVA & Downtown),true,,
 15310376,17274235,38.01568,-78.50015,private_room,Cozy Room- (Near UVA & Downtown),true,,
 156430,,38.03876,-78.47933,entire_home,★1 BR Private Apartment in Downtown Cville★,true,,
 15857729,,38.02751,-78.46383,private_room,Bright Cheerful Suite On Second Floor,true,,
-15911472,,38.0313182353314,-78.47872955427943,entire_home,Historic Cville Row House 1 Block to Downtown Mall,true,215,4th Street NE
-16228345,,38.01630445563019,-78.48411048110296,entire_home,Lovely apartment in Belmont Cville neighborhood,true,108,Blincoe Lane
+15911472,,38.0313182353314,-78.47872955427943,entire_home,Historic Cville Row House 1 Block to Downtown Mall,true,215,4th St NE
+16228345,,38.01630445563019,-78.48411048110296,entire_home,Lovely apartment in Belmont Cville neighborhood,true,108,Blincoe Ln
 164672,,38.06133,-78.47331,entire_home,Sunny Garden Apartment,true,,
 16585621,,38.01958,-78.4927,entire_home,"Clean, central, spacious, private - UVA/Downtown",true,,
 17041059,,38.073876512724226,-78.45448099770101,entire_home,Chateau Chamberlain in Charlottesville VA,true,1158,Farrow Dr
-17337587,,38.027200376260986,-78.4736122133679,entire_home,Modern Belmont home - steps from Downtown Mall!,true,203,Douglas Avenue
-17385872,,38.05183222346127,-78.46482501169213,entire_home,Rockbrook Manor,true,7,Rockbrook Drive
-17546107,,38.02664341974816,-78.47414980985889,entire_home,Two Bedrooms- Big Covered Porch-NO CLEANING FEE,true,209,Douglas Avenue
+17337587,,38.027200376260986,-78.4736122133679,entire_home,Modern Belmont home - steps from Downtown Mall!,true,203,Douglas Ave
+17385872,,38.05183222346127,-78.46482501169213,entire_home,Rockbrook Manor,true,7,Rockbrook Dr
+17546107,,38.02664341974816,-78.47414980985889,entire_home,Two Bedrooms- Big Covered Porch-NO CLEANING FEE,true,209,Douglas Ave
 17692064,,38.03748,-78.47275,entire_home,Park Street Retreat - #B,true,,
 1792587,9405078,38.04381,-78.45725,private_room,"Cape Cod in Locust Grove, C'ville",true,,
-18021210,,38.01586385381718,-78.50011640684396,entire_home,"Large 4 Bedroom Home near UVA,Downtown & Wineries",true,131,Old Fifth Circle
-18041128,,38.02439480836816,-78.4617286688121,entire_home,Architecturally-renovated Downtown 4BR farmhouse,true,1601,E Market Street
+18021210,,38.01586385381718,-78.50011640684396,entire_home,"Large 4 Bedroom Home near UVA,Downtown & Wineries",true,131,Old Fifth Cir
+18041128,,38.02439480836816,-78.4617286688121,entire_home,Architecturally-renovated Downtown 4BR farmhouse,true,1601,E Market St
 18055716,,38.02447,-78.52162,entire_home,Doggone Fun 3bdr UVA Home with free breakfast,true,,
-18254761,,38.045732821102284,-78.48488681625324,entire_home,Beautiful renovated home - heart of Cville and UVA,true,1515,Rugby Avenue
+18254761,,38.045732821102284,-78.48488681625324,entire_home,Beautiful renovated home - heart of Cville and UVA,true,1515,Rugby Ave
 18563785,,38.03793,-78.46359,entire_home,Chville home away from home.,true,,
 18566944,36821231,38.05844,-78.45195,private_room,Woodlands Retreat,true,,
-18601797,,38.01752514279524,-78.50202807410773,entire_home,Spacious suite in the heart of Charlottesville,true,834,Village Road
-18665941,,38.020014392470536,-78.47327223823633,entire_home,Downtown living,true,1115,Blenheim Avenue
+18601797,,38.01752514279524,-78.50202807410773,entire_home,Spacious suite in the heart of Charlottesville,true,834,Village Rd
+18665941,,38.020014392470536,-78.47327223823633,entire_home,Downtown living,true,1115,Blenheim Ave
 18689465,,38.02448,-78.47708,entire_home,"Luxury, open space, in the HEART of Belmont!",true,,
 18689593,,38.03544,-78.48966,entire_home,"Downtown studio, walk to corner/downtown mall/UVA",true,,
 18717752,,38.03132,-78.4935,entire_home,Modern Treehouse Retreat *Sanitized*,true,,
@@ -79,48 +79,48 @@ Walk Everywhere!!",true,700,Graves Street
 1948995,10078633,38.02718,-78.46307,private_room,Three rooms-walk to downtown,false,,
 19659797,,38.02166,-78.45883,entire_home,Woolen Mills Garden Apartment,true,,
 19700853,138800968,38.02269,-78.50007,private_room,"1 Bedroom in Downtown C-ville, Kid-Friendly!",true,,
-19796446,,38.03245556050893,-78.48900949849912,entire_home,"Walk Downtown, Corner, and UVA Grounds/Hospital!",true,612,Brown Street
+19796446,,38.03245556050893,-78.48900949849912,entire_home,"Walk Downtown, Corner, and UVA Grounds/Hospital!",true,612,Brown St
 19840754,6772903,38.06042,-78.48466,private_room,"City convenience, cozy privacy",true,,
 20193549,,38.023730409504985,-78.48818276323506,entire_home,Blue Heron: Beautiful new downtown apartment,true,106,Burnet Way
-20430324,,38.01925017850327,-78.51014425120101,entire_home,Cozy 3 bedroom home near UVa and Downtown Mall.,true,2508,Willard Drive
+20430324,,38.01925017850327,-78.51014425120101,entire_home,Cozy 3 bedroom home near UVa and Downtown Mall.,true,2508,Willard Dr
 20686304,148042359,38.07175,-78.46842,private_room,"Entire walk-in basement, 3.5 mi Downtown, 6 mi UVA",true,,
-21413176,,38.02199974843167,-78.4824502496175,entire_home,Belmont Base for Charlottesville Adventures!,true,613,Elliott Avenue
+21413176,,38.02199974843167,-78.4824502496175,entire_home,Belmont Base for Charlottesville Adventures!,true,613,Elliott Ave
 21658945,,38.02971,-78.48256,entire_home,Luxurious Posh Downtown Condo,true,,
-22433028,,38.02922041662217,-78.4855061652135,entire_home,The Cottage on Ridge-Downtown Mall Charlottesville,true,214,Ridge Street
+22433028,,38.02922041662217,-78.4855061652135,entire_home,The Cottage on Ridge-Downtown Mall Charlottesville,true,214,Ridge St
 22494093,,38.02552,-78.50566,entire_home,"3 bdrm home 1 mile from UVA, No extra fees!",true,,
-22626013,,38.02499713713537,-78.47513405654533,entire_home,Blue Bell | Private Parking Space | Fast WiFi,true,227,Douglas Avenue
+22626013,,38.02499713713537,-78.47513405654533,entire_home,Blue Bell | Private Parking Space | Fast WiFi,true,227,Douglas Ave
 22881264,,38.0177,-78.49438,entire_home,2 BDRM Spacious & Private Apt Close to Downtown,true,,
 23004014,,38.02298,-78.47411,entire_home,BELMONT DESIGNER APARTMENT- CVILLE CHARM,true,,
 23163410,,38.02564,-78.48654,entire_home,Downtown Retro Retreat,true,,
 23257938,,38.05441,-78.45634,entire_home,Great 3 BR home near UVA and Downtown!,true,,
-23271179,,38.02499713713537,-78.47513405654533,entire_home,Green Ivy | Private Parking Space | Fast WiFi,true,227,Douglas Avenue
+23271179,,38.02499713713537,-78.47513405654533,entire_home,Green Ivy | Private Parking Space | Fast WiFi,true,227,Douglas Ave
 2350534,,38.07696,-78.45947,entire_home,Elbow Room - spacious suite in quiet neighborhood,true,,
 23918430,16759425,38.02766,-78.45383,private_room,Riverside Hideaway: spacious garden level studio,true,,
 2399994,,38.0479,-78.48517,entire_home,Oxford Cottage: Cville’s favorite tiny home!,true,,
 24076293,,38.04735,-78.50238,entire_home,"Serene and spacious home, <1 mile walk to UVA lawn",true,,
-24371386,,38.026204452665425,-78.5180417326537,entire_home,"Close to UVA, walk to restaurants, free trolley",true,2317,Fontaine Avenue Extended
-24451050,,38.026748693549806,-78.47345034950156,entire_home,West Wing,false,204,Douglas Avenue
-24532721,82268357,38.02526156976197,-78.47827789770787,private_room,Historic Belmont House downtown - Queen Bedroom 2,true,520,Avon Street
+24371386,,38.026204452665425,-78.5180417326537,entire_home,"Close to UVA, walk to restaurants, free trolley",true,2317,Fontaine Ave Extended
+24451050,,38.026748693549806,-78.47345034950156,entire_home,West Wing,false,204,Douglas Ave
+24532721,82268357,38.02526156976197,-78.47827789770787,private_room,Historic Belmont House downtown - Queen Bedroom 2,true,520,Avon St
 24736213,,38.06073,-78.46643,entire_home,Renovated Basement unit with private entrance,true,,
 24748029,,38.03893,-78.51388,entire_home,Steps to UVa- New & Clean,true,,
 24963206,3862766,38.01681,-78.49314,private_room,"Great house, great location! Dogs welcome :)",true,,
-25031828,,38.026034011657245,-78.46580042806079,entire_home,"Woolen Mills Cottage- 2 Beds, 1 Bath, Full Kitchen",false,1319,E Market Street
+25031828,,38.026034011657245,-78.46580042806079,entire_home,"Woolen Mills Cottage- 2 Beds, 1 Bath, Full Kitchen",false,1319,E Market St
 25204022,,38.04554,-78.48667,entire_home,Central Charlottesville Living in a Well-Appointed Home,true,,
 25628663,,38.0196,-78.48482,entire_home,City Home in Belmont with Nature All Around,true,,
-25717437,,38.02570654845529,-78.47941313396909,entire_home,"Belmont Classic/Modern Reno, Walkable",true,613,Belont Avenue
-25802228,,38.02556166907554,-78.47671825656215,entire_home,HighGround on Hinton,false,727,Hinton Avenue
+25717437,,38.02570654845529,-78.47941313396909,entire_home,"Belmont Classic/Modern Reno, Walkable",true,613,Belont Ave
+25802228,,38.02556166907554,-78.47671825656215,entire_home,HighGround on Hinton,false,727,Hinton Ave
 2591146,7320404,38.04599,-78.50007,private_room,"Comfort, Convenience, & Charm - The Charles Suite",false,,
-26560609,,38.0271270455959,-78.47497660737406,entire_home,"Corner House | Stylish Belmont Home, near Downtown",true,742,Graves Street
+26560609,,38.0271270455959,-78.47497660737406,entire_home,"Corner House | Stylish Belmont Home, near Downtown",true,742,Graves St
 26714842,,38.035139015982374,-78.48015695820888,entire_home,Spacious Sunny 1 Bedroom + Study +Double Bathroom,true,,
 27110175,,38.0449,-78.45663,entire_home,The Burrow (Bring Own Wands),true,,
-27576154,,38.019970521039724,-78.4703776307907,entire_home,"Net Zero, Guilt Free Living! 1 mile from DT",true,1308,Hampton Street
-27666996,,38.027200376260986,-78.4736122133679,entire_home,Belmont Home with Hot Tub - steps from Downtown,false,203,Douglas Avenue
-27719797,,38.019970521039724,-78.4703776307907,entire_home,100% Solar Home! Guilt Free Living 1 mile from DT,false,1308,Hampton Street
-27820944,,38.01033963317488,-78.49497101323998,entire_home,The Empty Nest,true,923,Royer Drive
-28340277,,38.016161259678626,-78.51031228857369,entire_home,Cavalier Carriage House Suite | Near UVA,true,106,Oak Lawn Drive
+27576154,,38.019970521039724,-78.4703776307907,entire_home,"Net Zero, Guilt Free Living! 1 mile from DT",true,1308,Hampton St
+27666996,,38.027200376260986,-78.4736122133679,entire_home,Belmont Home with Hot Tub - steps from Downtown,false,203,Douglas Ave
+27719797,,38.019970521039724,-78.4703776307907,entire_home,100% Solar Home! Guilt Free Living 1 mile from DT,false,1308,Hampton St
+27820944,,38.01033963317488,-78.49497101323998,entire_home,The Empty Nest,true,923,Royer Dr
+28340277,,38.016161259678626,-78.51031228857369,entire_home,Cavalier Carriage House Suite | Near UVA,true,106,Oak Lawn Dr
 28856729,,38.04627,-78.49883,entire_home,Peaceful and Spacious Woodland Haven Near UVA,false,,
 29263972,,38.04198,-78.46509,entire_home,Giallo House | Self Check-in,true,,
-29334145,,38.044021071590144,-78.4984430468296,entire_home,Fabulous Rugby Rd Luxury Home-Walk to UVA & MainSt,true,803,Rugby Road
+29334145,,38.044021071590144,-78.4984430468296,entire_home,Fabulous Rugby Rd Luxury Home-Walk to UVA & MainSt,true,803,Rugby Rd
 29452766,,38.02498,-78.47829,entire_home,Designer Belmont Apartment! Close to everything!,true,,
 30444903,228444276,38.03981,-78.46039,private_room,Room no.2 - Guesthouse,true,,
 30445193,228444276,38.04184,-78.46058,private_room,Room no. 3 - Guesthouse,true,,
@@ -128,7 +128,7 @@ Walk Everywhere!!",true,700,Graves Street
 3061401,10078633,38.02903,-78.4641,private_room,Two Queen Rooms - Near Downtown,true,,
 3061458,10078633,38.02925,-78.46383,private_room,Queen Room - Walk to downtown,false,,
 31017496,,38.03493,-78.48928,entire_home,The Urban Cottage in the center of C-Ville!,true,,
-31189272,,38.041344233540315,-78.4610998754353,entire_home,"Locust Grove Retreat- 3 Bed, 1 Bath, Full Kitchen",true,1027,Martin Street
+31189272,,38.041344233540315,-78.4610998754353,entire_home,"Locust Grove Retreat- 3 Bed, 1 Bath, Full Kitchen",true,1027,Martin St
 31190062,22397450,38.0223,-78.51458,private_room,Fry's Spring Bliss,true,,
 31255844,,38.01653,-78.51,entire_home,NEW Cville HOME 4 bdrm (no cleaning fee).,true,,
 31568345,,38.03017,-78.46604,entire_home,"Cozy basement guest suite, 15 min walk to downtown",true,,
@@ -144,8 +144,8 @@ Walk Everywhere!!",true,700,Graves Street
 33658833,,38.04179763793945,-78.46349334716797,entire_home,Charming St. Charles,false,,
 34256214,,38.05662,-78.50046,entire_home,"Barracks Rd Condo, Great spot for all JPJ events",true,,
 34466238,,38.01904,-78.4955,entire_home,Sunsets Overlooking C'ville,true,,
-35287055,,38.0315504383731,-78.48964159497288,entire_home,Main Street Downtown Balcony Apartment,true,635,W Main Street
-35822286,,38.04844448159471,-78.49471712595916,entire_home,"Luxury Furnished Home Near UVA, Darden, Downtown",true,104,Buckingham Road
+35287055,,38.0315504383731,-78.48964159497288,entire_home,Main Street Downtown Balcony Apartment,true,635,W Main St
+35822286,,38.04844448159471,-78.49471712595916,entire_home,"Luxury Furnished Home Near UVA, Darden, Downtown",true,104,Buckingham Rd
 36311511,,38.063567862699394,-78.49867419942127,entire_home,The Comfy Ranch,true,102,Inglewood Court
 36521202,,38.06114,-78.46727,entire_home,22Newly furnished just completed home in the city.,true,,
 36834796,186023090,38.0603,-78.46691,private_room,22Newly updated Ensuite Master Bedrm in the city.,true,,
@@ -154,15 +154,15 @@ Walk Everywhere!!",true,700,Graves Street
 3730726,,38.01824,-78.51785,entire_home,Close to UVA/Private Outdoor Entry,true,,
 38308971,,38.01564,-78.50927,entire_home,Contemporary Light Filled Carriage House,true,,
 38344624,264751010,38.04396,-78.4694,private_room,"Spacious, private terrace level unit.",true,,
-38573765,,38.023756741371095,-78.50030499990237,entire_home,Private Studio Basement Apt close to UVA,true,,1428 Briarcliff Avenue
+38573765,,38.023756741371095,-78.50030499990237,entire_home,Private Studio Basement Apt close to UVA,true,,1428 Briarcliff Ave
 39132420,,38.03294,-78.47184,entire_home,Vintage Attic Apartment walk to Downtown Mall.,false,,
 39153205,,38.02287,-78.5144,entire_home,New luxury tiny house in central Charlottesville,false,,
-39387594,,38.01877376123676,-78.49152500641215,entire_home,Great Location - Gorgeous View (Close to UVA),true,138,Baylor Lane
+39387594,,38.01877376123676,-78.49152500641215,entire_home,Great Location - Gorgeous View (Close to UVA),true,138,Baylor Ln
 39895030,,38.03147,-78.50689,private_room,Oakhurst Inn: a boutique hotel at the University,true,,
-3997007,,38.023412872703425,-78.47222958222912,entire_home,Private appartment in Charlottesville / Belmont,true,1100,Leonard Street
+3997007,,38.023412872703425,-78.47222958222912,entire_home,Private appartment in Charlottesville / Belmont,true,1100,Leonard St
 40121564,,38.02911,-78.46571,entire_home,Meade Cottage,true,,
 40125467,,38.01619,-78.47526,entire_home,"Greensview Apartment | Belmont, close to Downtown!",true,,
-40133437,,38.027610241053786,-78.51715264956599,entire_home,Stadium House|Perfect House close to UVA!,true,2307,Price Avenue
+40133437,,38.027610241053786,-78.51715264956599,entire_home,Stadium House|Perfect House close to UVA!,true,2307,Price Ave
 40147377,,38.03659,-78.478,entire_home,Zen Upscale Luxury in Downtown Charlottesville,true,,
 4024562,,38.04937,-78.49559,entire_home,"Luxury 2BR Suite One Mile From UVa, Near Downtown",true,,
 40250625,,38.04919,-78.49328,entire_home,Redbud Garden Suite,true,,
@@ -170,31 +170,31 @@ Walk Everywhere!!",true,700,Graves Street
 40533478,,38.02975,-78.4817,entire_home,The Wood Company Loft | Fully renovated modern apa,true,,
 40759154,,38.03829,-78.47729,entire_home,★Large 2 Bedroom Private Apartment-Downtown★,true,,
 40795124,,38.01975,-78.4838,entire_home,Spacious city home near everything with large yard,false,,
-4085607,,38.04298186580923,-78.45994329302317,entire_home,Cozy Cape Cod in Heart of Downtown,true,1104,Locust Avenue
+4085607,,38.04298186580923,-78.45994329302317,entire_home,Cozy Cape Cod in Heart of Downtown,true,1104,Locust Ave
 41146727,,38.06265,-78.48026,entire_home,The Dragonfly-a quiet & charming apartment,true,,
 41192292,,38.06423,-78.4801,entire_home,"The Hummingbird, a cozy quiet, 2 room apartment",true,,
 41614683,,38.02096,-78.50563,entire_home,Come home for the holidays!,true,,
-42021058,,38.02899106327884,-78.47847000835301,entire_home,Water Street Condo | Modern Downtown Retreat,true,550,E Water Street
+42021058,,38.02899106327884,-78.47847000835301,entire_home,Water Street Condo | Modern Downtown Retreat,true,550,E Water St
 42065169,,38.01895,-78.4728,entire_home,Unique space in downtown Belmont,true,,
-42131616,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Suite 204,false,110-112,E Main Street
+42131616,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Suite 204,false,110-112,E Main St
 42243387,,38.0437,-78.49797,private_room,Private Queen Room in Historic Home on edge of UVA,true,,
-42245308,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Suite 201,true,110-112,E Main Street
-42246378,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Suite 202,true,110-112,E Main Street
-42250924,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Suite 203,true,110-112,E Main Street
-42251052,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Studio 304,true,110-112,E Main Street
-42251827,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Studio 303,true,110-112,E Main Street
-42252428,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Studio 302,true,110-112,E Main Street
-42252665,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Studio 301,true,110-112,E Main Street
-42758973,,38.03324890136719,-78.4622802734375,entire_home,Dog Friendly/Gated Yard Close to Downtown Mall,true,1509,E High Street
-42950362,,38.03324890136719,-78.4622802734375,entire_home,Spacious Dog Friendly Close to Downtown and UVA,true,1509,E High Street
-42951354,,38.03324890136719,-78.4622802734375,entire_home,Bicycle Haven Close to Downtown & UVA,true,1509,E High Street
-42951709,,38.03324890136719,-78.4622802734375,entire_home,Garden Retreat Close to Downtown & UVA,true,1509,E High Street
+42245308,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Suite 201,true,110-112,E Main St
+42246378,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Suite 202,true,110-112,E Main St
+42250924,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Suite 203,true,110-112,E Main St
+42251052,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Studio 304,true,110-112,E Main St
+42251827,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Studio 303,true,110-112,E Main St
+42252428,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Studio 302,true,110-112,E Main St
+42252665,,38.030473763834394,-78.48131487825273,private_room,The Jeff Hotel | Studio 301,true,110-112,E Main St
+42758973,,38.03324890136719,-78.4622802734375,entire_home,Dog Friendly/Gated Yard Close to Downtown Mall,true,1509,E High St
+42950362,,38.03324890136719,-78.4622802734375,entire_home,Spacious Dog Friendly Close to Downtown and UVA,true,1509,E High St
+42951354,,38.03324890136719,-78.4622802734375,entire_home,Bicycle Haven Close to Downtown & UVA,true,1509,E High St
+42951709,,38.03324890136719,-78.4622802734375,entire_home,Garden Retreat Close to Downtown & UVA,true,1509,E High St
 43002555,,38.03104,-78.46959,entire_home,"Bright, cheerful & comfortable home!",true,,
 4342251,,38.03219,-78.47137,entire_home,Patio Downtown Retreat,false,,
-43422636,,38.04111423851004,-78.47056522328354,entire_home,Enderly - c1859 - English Basement Apartment,true,603,Watson Avenue
-43849674,,38.018290700346775,-78.47876282971868,entire_home,Best of Belmont-Modern and Cozy,true,905,Druid Avenue
+43422636,,38.04111423851004,-78.47056522328354,entire_home,Enderly - c1859 - English Basement Apartment,true,603,Watson Ave
+43849674,,38.018290700346775,-78.47876282971868,entire_home,Best of Belmont-Modern and Cozy,true,905,Druid Ave
 4391817,,38.02327,-78.48057,entire_home,Downtown Top Floor Apartment (Reduced Weekdays),true,,
-44012710,,38.02312449626261,-78.46171296163023,entire_home,Private Suite in a Modern Downtown Farmhouse,true,124,Franklin Street
+44012710,,38.02312449626261,-78.46171296163023,entire_home,Private Suite in a Modern Downtown Farmhouse,true,124,Franklin St
 4438519,,38.02562,-78.4762,entire_home,City seclusion 10 Mins From UVa!,true,,
 44517152,160726034,38.06644,-78.49638,private_room,Heart of the Stone-field/UVA. FullSize Bedroom #1.,false,,
 44518324,160726034,38.06803,-78.49774,private_room,Heart of stone-field/UVA hospital (King-Bedroom#2),true,,
@@ -202,64 +202,64 @@ Walk Everywhere!!",true,700,Graves Street
 44540947,,38.05072,-78.49971,entire_home,UVA Neighborhood Spacious Upper Floor,true,,
 44589010,6389624,38.04356,-78.49887,private_room,2 Private Rooms in Historic Home on edge of UVA,true,,
 44644190,,38.03752,-78.46287,entire_home,Otter Suite - Great place to stay & play!,true,,
-44800051,,38.02071643649656,-78.47575657856994,entire_home,Belleza Cottage |  Fast Wifi | Quiet Neighborhood Near Downtown,true,920,Blenheim Avenue
+44800051,,38.02071643649656,-78.47575657856994,entire_home,Belleza Cottage |  Fast Wifi | Quiet Neighborhood Near Downtown,true,920,Blenheim Ave
 45002559,,38.0671,-78.49674,entire_home,Entire house Close to UVA/Downtown/Scott-Stadium.,true,,
-45073863,,38.02811,-78.51718,entire_home,"UVa, Stadium, Downtown , Wineries & The Corner",true,2305,Price Avenue
+45073863,,38.02811,-78.51718,entire_home,"UVa, Stadium, Downtown , Wineries & The Corner",true,2305,Price Ave
 45178693,,38.027601689508685,-78.51687895274367,entire_home,Historic Beauty and Walkable to Everywhere,true,,
 45366758,17274235,38.01521,-78.49932,private_room,Cozy Room with Balcony near Downtown & UVA.,true,,
-45409003,,38.023259646894545,-78.49054112336275,entire_home,Apartment In Historical Building Close To Downtown,true,752,Ridge Street
-45409075,,38.020903366846596,-78.48449113650487,entire_home,"Sunny 3 bedroom Belmont home, pet friendly!",true,508,Druid Avenue
-45517841,,38.02347503477381,-78.47971045128857,entire_home,Avon House | Bright Large Family Home,true,804,Avon Street
+45409003,,38.023259646894545,-78.49054112336275,entire_home,Apartment In Historical Building Close To Downtown,true,752,Ridge St
+45409075,,38.020903366846596,-78.48449113650487,entire_home,"Sunny 3 bedroom Belmont home, pet friendly!",true,508,Druid Ave
+45517841,,38.02347503477381,-78.47971045128857,entire_home,Avon House | Bright Large Family Home,true,804,Avon St
 45557208,,38.02365,-78.48828,entire_home,"Warner House | Charming Home, walk Downtown",false,,
 45652261,,38.03546,-78.47684,entire_home,The Carriage House at Wine Cellar Circle,true,,
-45736633,,38.01863522039483,-78.51785838669184,entire_home,Terrace Level Apartment Walking Distance to UVA,true,2617,Jefferson Park Circle
-45786351,,38.04088000837864,-78.45963188714026,entire_home,This is a entire upstairs for up to 6 guests.,true,1028,St Claire Avenue
-45829101,,38.022581243059086,-78.52173088097169,entire_home,"Bluebird Bungalow in Frye Spring- 2 bed, 1 bath",true,233,Stribling Avenue
-45864810,,38.02078985934193,-78.47309248250005,entire_home,Open Heart - Walk to Downtown-pets are welcomed!,false,1215,Monticello Road
+45736633,,38.01863522039483,-78.51785838669184,entire_home,Terrace Level Apartment Walking Distance to UVA,true,2617,Jefferson Park Cir
+45786351,,38.04088000837864,-78.45963188714026,entire_home,This is a entire upstairs for up to 6 guests.,true,1028,St Claire Ave
+45829101,,38.022581243059086,-78.52173088097169,entire_home,"Bluebird Bungalow in Frye Spring- 2 bed, 1 bath",true,233,Stribling Ave
+45864810,,38.02078985934193,-78.47309248250005,entire_home,Open Heart - Walk to Downtown-pets are welcomed!,false,1215,Monticello Rd
 45951228,,38.01504,-78.48273,entire_home,Belmont Carriage House,true,,
-46090884,,38.026213803275915,-78.45415106925667,entire_home,3Bed/2.5Baths Townhome minutes to Downtown and UVA,true,350,Riverside Avenue
+46090884,,38.026213803275915,-78.45415106925667,entire_home,3Bed/2.5Baths Townhome minutes to Downtown and UVA,true,350,Riverside Ave
 46466293,,38.04719,-78.48847,entire_home,"New, sunny, studio apartment near UVA/Downtown",true,,
-46522622,,38.037937011799634,-78.49287676678621,entire_home,The Metta Gem- A Stay w/ Compassion and Charm,true,406,10 1/2 Street NW
+46522622,,38.037937011799634,-78.49287676678621,entire_home,The Metta Gem- A Stay w/ Compassion and Charm,true,406,10 1/2 St NW
 46578029,,38.04281,-78.4975,entire_home,Private Cozy Twin in Historic Home on edge of UVA,true,,
-46748654,,38.02049899031673,-78.50147071429315,entire_home,Renovated 5BR Home Close to UVA/Downtown,true,715,Shamrock Road
+46748654,,38.02049899031673,-78.50147071429315,entire_home,Renovated 5BR Home Close to UVA/Downtown,true,715,Shamrock Rd
 46767969,67044851,38.03818,-78.49172,private_room,The Metta Grotto- An All Embracing Warmth,true,,
 46768941,,38.02879,-78.46571,entire_home,"Clean, cozy guesthouse near historic downtown mall",true,,
-46770910,,38.037937011799634,-78.49287676678621,entire_home,The Metta Gem - An Entire Home w/ Loving Kindness,true,406,10 1/2 Street NW
-46966786,,38.036135898718506,-78.47739130992633,entire_home,Wine Cellar Cottage | Walk to Downtown | Parking,true,611,Wine Cellar Circle
+46770910,,38.037937011799634,-78.49287676678621,entire_home,The Metta Gem - An Entire Home w/ Loving Kindness,true,406,10 1/2 St NW
+46966786,,38.036135898718506,-78.47739130992633,entire_home,Wine Cellar Cottage | Walk to Downtown | Parking,true,611,Wine Cellar Cir
 47114417,,38.03469,-78.47578,entire_home,Private Apt in Historic C'ville Home (Garden Side),true,,
 47123684,,38.04077,-78.47154,entire_home,Park Street Cottage | 5 bdrm/4 bath | Sleeps 14,true,,
-47372839,,38.03752788829667,-78.46123093727559,entire_home,River Vista Cottage | 1 Floor | King+Queen Beds,false,1220,River Vista Avenue
-47520874,,38.028200458278654,-78.50026078011979,entire_home,King Cottage | Near DT/UVA/Hospital | No Stairs,true,1200,King Street
-47785963,,38.04314946865083,-78.48682370472255,entire_home,Beautiful Ranch Style Home - Close to Dtwn CVille!,true,1203,Greenway Road
-48088408,,38.04837426125174,-78.49470016777926,entire_home,Stylish Luxe Smart Home Near UVA and Downtown Mall,true,104,Buckingham Road
-48096352,,38.03304787338851,-78.47076760283534,entire_home,The Pop Inn | Perfect for your group getaway,true,515,Locust Avenue
+47372839,,38.03752788829667,-78.46123093727559,entire_home,River Vista Cottage | 1 Floor | King+Queen Beds,false,1220,River Vista Ave
+47520874,,38.028200458278654,-78.50026078011979,entire_home,King Cottage | Near DT/UVA/Hospital | No Stairs,true,1200,King St
+47785963,,38.04314946865083,-78.48682370472255,entire_home,Beautiful Ranch Style Home - Close to Dtwn CVille!,true,1203,Greenway Rd
+48088408,,38.04837426125174,-78.49470016777926,entire_home,Stylish Luxe Smart Home Near UVA and Downtown Mall,true,104,Buckingham Rd
+48096352,,38.03304787338851,-78.47076760283534,entire_home,The Pop Inn | Perfect for your group getaway,true,515,Locust Ave
 48165048,,38.02813,-78.48979,entire_home,Delightful loft cottage in the heart of CVille,true,,
-48681240,,38.04320961661774,-78.46464551133053,entire_home,Holmes House,true,1004,Holmes Avenue
+48681240,,38.04320961661774,-78.46464551133053,entire_home,Holmes House,true,1004,Holmes Ave
 48742258,227743001,38.06717,-78.49921,private_room,"Steps from Stonefield, gorgeous, luxurious condo",true,,
-48995354,,38.028210001345464,-78.48680730502656,entire_home,"The Cherry Tree, downtown estate, 8 parking spaces",true,401,Ridge Street
+48995354,,38.028210001345464,-78.48680730502656,entire_home,"The Cherry Tree, downtown estate, 8 parking spaces",true,401,Ridge St
 49062881,,38.02384,-78.45835,entire_home,"The Metal House, 3 miles from UVA Grounds",false,,
-49062964,,38.024594124108184,-78.4799566289616,entire_home,Renovated Bright and Modern Downtown Farmhouse,true,618,Monticello Avenue
+49062964,,38.024594124108184,-78.4799566289616,entire_home,Renovated Bright and Modern Downtown Farmhouse,true,618,Monticello Ave
 49122601,105239578,38.01379,-78.46969,private_room,"C’ville “Suite Spot”- Private, Comfy, Min. from DT",true,,
 49151790,,38.04668,-78.49982,entire_home,Beautiful home on tree-lined street steps from UVA,true,,
 49178848,,38.02424,-78.50983,entire_home,0.5 mile to Scott Stadium! | Comfy Upper-Level Apt,true,,
 49179366,186023090,38.06882,-78.46622,private_room,115 Updated City home. 2.9 miles from UVA hospital,true,,
 49232223,186023090,38.06875,-78.4686,private_room,115Renovated city home. 2.9 miles to UVA hospital.,false,,
 49386430,,38.05675,-78.49038,entire_home,Close to UVA/Downtown - for Large Groups,true,,
-49400258,,38.03019675756487,-78.48042346456354,entire_home,Charlottesville Dreamin' | Downtown | Parking,true,213,E Water Street
+49400258,,38.03019675756487,-78.48042346456354,entire_home,Charlottesville Dreamin' | Downtown | Parking,true,213,E Water St
 49403790,,38.02157,-78.47134,entire_home,"Belmont Private Suite, 1/2 mile to Downtown Mall",false,,
 4950655,,38.02283,-78.4611,entire_home,Woolen Mills garden apartment /private,true,,
 49562253,,38.03104,-78.48394,entire_home,NEW Modern Condo on the Downtown Mall,true,,
-49604375,,38.021131686443155,-78.48147585435056,entire_home,Belmont Bungalow 1/2 Mile to Downtown!,true,1104,Avon Street
-4961336,,38.02696407791368,-78.51825003639158,entire_home,Azalea Cottage near UVa,true,2318,Price Avenue
-49732283,,38.02638416364941,-78.47810959619372,entire_home,⋆Best of Downtown & Belmont in Historic Home/ 2bd⋆,true,415,Avon Street
+49604375,,38.021131686443155,-78.48147585435056,entire_home,Belmont Bungalow 1/2 Mile to Downtown!,true,1104,Avon St
+4961336,,38.02696407791368,-78.51825003639158,entire_home,Azalea Cottage near UVa,true,2318,Price Ave
+49732283,,38.02638416364941,-78.47810959619372,entire_home,⋆Best of Downtown & Belmont in Historic Home/ 2bd⋆,true,415,Avon St
 49747869,,38.036495208740234,-78.47752380371094,entire_home,DOWNTOWN MALL MODERN HOUSE,true,,
-49774522,,38.04363057141766,-78.51912163522202,entire_home,pink cottage @ locust grange,true,365,Twin Sycamores Lane
-49905821,,38.028601415422294,-78.48898006430335,entire_home,Guest Suite in heart of downtown Charlottesville,true,308,5th Street SW
+49774522,,38.04363057141766,-78.51912163522202,entire_home,pink cottage @ locust grange,true,365,Twin Sycamores Ln
+49905821,,38.028601415422294,-78.48898006430335,entire_home,Guest Suite in heart of downtown Charlottesville,true,308,5th St SW
 49921758,,38.02502,-78.4763,entire_home,Southern Lux Apartment - 30+ night in Dtwn Belmont,false,,
 49922001,,38.02453,-78.4747,entire_home,Fairytale Loft | 1 bed/1 bath in Downtown Belmont,true,,
 49982659,,38.06889,-78.49239,entire_home,"Vaulted Ceilings, Private Balcony, Near Everything",true,,
 50006134,,38.02296,-78.47444,entire_home,Pharmacy Apartment | 30 + Rental in Dtwn Belmont,true,,
-50178595,,38.03478376169526,-78.48219648952677,entire_home,Killer Downtown Efficiency,true,415,McIntire Road
+50178595,,38.03478376169526,-78.48219648952677,entire_home,Killer Downtown Efficiency,true,415,McIntire Rd
 50291776,,38.02368,-78.47547,entire_home,Retro Apartment | Lux Extended Stay in Belmont,true,,
 50501829,,38.02447,-78.46083,entire_home,Sun Cottage in Downtown Charlottesville,true,,
 50674332,,38.04987,-78.50016,entire_home,Heart of Cville: Woodview near UVA,true,,
@@ -269,7 +269,7 @@ Walk Everywhere!!",true,700,Graves Street
 51120572,10078633,38.02759,-78.46372,private_room,Room with Full Bed - Walk to Downtown,true,,
 51147596,186023090,38.0677,-78.46714,private_room,115 Cozy bedroom in a renovated city home.,true,,
 51189642,,38.04222,-78.49915,entire_home,The Venable - A Gorgeous Home in the Heart of UVA,true,626,Preston Place
-51225982,,38.05134042020064,-78.48270926671378,entire_home,The House on Rose Hill - Downtown C-Ville Living,true,1620,Rose Hill Drive
+51225982,,38.05134042020064,-78.48270926671378,entire_home,The House on Rose Hill - Downtown C-Ville Living,true,1620,Rose Hill Dr
 51417755,,38.034515,-78.475258,entire_home,"Downtown 3 BR, just two blocks to mall w/ Hot tub",false,,
 51469389,,38.03998,-78.46189,entire_home,LuxuryOnLocust. 1 mile to downtown.,false,,
 51531285,,38.01684,-78.5121,entire_home,The Gardener’s Cottage,true,,
@@ -286,14 +286,14 @@ Walk Everywhere!!",true,700,Graves Street
 52457378,,38.01752,-78.51219,entire_home,Cozy Home within walking distance to Scott Stadium,true,,
 52666860,,38.0243,-78.476,entire_home,French Cottage Apt | 30+ nights in Dtwn Belmont,false,,
 52674667,,38.032475,-78.454956,entire_home,"Spacious 2 BR 2 BA Modern Condo, Easy Location",true,,
-53169512,,38.02346607681573,-78.47747116828785,entire_home,Yellow House| 2 BR Cottage Dtwn Cville/Belmont,true,802,Monticello Avenue
+53169512,,38.02346607681573,-78.47747116828785,entire_home,Yellow House| 2 BR Cottage Dtwn Cville/Belmont,true,802,Monticello Ave
 53202512,,38.02565,-78.47864,entire_home,Hinton House - A Perfectly Located Downtown Home,true,,
 53212810,,38.03943,-78.45743,entire_home,Lovely 2 bedroom townhouse with parking,true,,
 53215192,,38.033294677734375,-78.46216583251953,entire_home,Restful Studio Close To Downtown & UVA Hospital,true,,
 53220686,,38.066048,-78.503799,entire_home,Centrally located for all thing Charlottesville!,false,,
 53230241,,38.033294677734375,-78.46216583251953,entire_home,Peaceful Oasis Close To Downtown and UVA Hospital,true,,
 53456078,,38.04341,-78.48925,entire_home,"Quiet & family friendly, 1 mile to UVA & downtown",true,,
-5352948,,38.020908187875456,-78.47308174937115,entire_home,"Belmont Views - Beautiful, Spacious Apartment",true,1215,Monticello Road
+5352948,,38.020908187875456,-78.47308174937115,entire_home,"Belmont Views - Beautiful, Spacious Apartment",true,1215,Monticello Rd
 53544297,,38.04159,-78.49038,entire_home,"Preston Lofts-Spacious, Modern, Central, Green",true,,
 53600725,134096167,38.02399,-78.49585,private_room,Room A in a Townhouse Close to UVA Hospital,true,,
 53611903,134096167,38.02461,-78.49639,private_room,Room B in a Townhouse Close to UVA Hospital,true,,
@@ -323,7 +323,7 @@ Walk Everywhere!!",true,700,Graves Street
 591438154736560238,,38.029331,-78.487503,entire_home,"Modern cottage - walk downtown, UVA hosp & campus!",true,,
 5954234,,38.03067,-78.49162,entire_home,New Custom Home in Downtown C'Ville,true,,
 600056193685666644,,38.014801,-78.473129,entire_home,Eden  - perfect stay in lower Belmont!,true,,
-6024395,,38.02606792127512,-78.47649346582557,entire_home,Charming Belmont / Downtown cottage,true,330,Monticello Road
+6024395,,38.02606792127512,-78.47649346582557,entire_home,Charming Belmont / Downtown cottage,true,330,Monticello Rd
 608097103135429985,,38.03475536766003,-78.47250115099813,entire_home,"Modern Downtown Apt, walk to Mall, near UVA",true,,
 608706356328558802,,38.02461,-78.47427,entire_home,Grove Apt | 30+ nights in Dwtn Belmont,true,,
 609245145095265349,,38.02315,-78.47368,entire_home,Service Station Apt - Extended Stay-Dtwn Belmont,true,,
@@ -360,13 +360,13 @@ Walk Everywhere!!",true,700,Graves Street
 689298324126544219,,38.01898,-78.51108,entire_home,Cheerful 2-Bedrooms home in UVA Neighborhood.,true,,
 690268317492051143,,38.01517,-78.51574,entire_home,Newly renovated one bedroom!,true,,
 692489808687800723,,38.0228043,-78.4826756,entire_home,"The Ari - Belmont 2 bed, 1 bath, walk to downtown",true,,
-694842585387729677,,38.02734787575216,-78.51906792477077,entire_home,The Nook at UVA -super quiet & right on Grounds!,true,119,Piedmont Avenue N
+694842585387729677,,38.02734787575216,-78.51906792477077,entire_home,The Nook at UVA -super quiet & right on Grounds!,true,119,Piedmont Ave N
 6967254,,38.04368,-78.45591,entire_home,Suite w/Pvt. Entrance+Screen Porch.,true,,
 698321819774407074,,38.05628188126209,-78.47564056572786,entire_home,Greenbrier Getaway,true,,
 699993648283250117,,38.02437,-78.46049,entire_home,Tranquil Woolen Mills Garden Apartment,true,,
 705073961831078679,,38.02587,-78.50682,entire_home,Cozy home amazing location walk to UVA/Stadium,true,,
 706550091633937542,,38.03808,-78.47688,entire_home,North Downtown Maple - 3 Bed/2 Bath Dtwn Cville,true,,
-7086685,,38.02801162319691,-78.46774530906002,entire_home,Cheerful Cottage,true,1214,E Jefferson Street
+7086685,,38.02801162319691,-78.46774530906002,entire_home,Cheerful Cottage,true,1214,E Jefferson St
 710888861667894189,,38.0249735,-78.5119926,entire_home,Hill Street House walk to UVA Stadium/Fry's Spring,true,,
 712472644543219999,,38.0206,-78.46904,entire_home,Cool 4-bedroom townhome walkable to restaurants,true,,
 713916694001144609,,38.01497,-78.4831,entire_home,Belmont Beauty: 1 mile to DT Mall & 2 miles to UVA,false,,
@@ -456,25 +456,25 @@ Walk Everywhere!!",true,700,Graves Street
 901728627943477191,28678098,38.020675822650645,-78.49750871534422,private_room,Dedicated quiet bedroom w/ Queen in house share.,true,,
 907921492539010529,,38.02989244977957,-78.4830349319268,entire_home,"Entire 5 Bed, 5 Bath Boutique Hotel | Dtwn Cville",true,209,2nd St SW
 9129518,,38.0232376042478,-78.46043360218428,entire_home,Woolen Mills Retreat | Close to Downtown with pool,true,1618,E Market St
-9129687,,38.02969170843505,-78.47250398037842,entire_home,Pryor-Haynes House Downtown Historic Stately Home,true,1004,E Jefferson Street
-9129723,,38.02387547782922,-78.47106746552043,entire_home,The Belmont Flat | Located in the popular Belmont,true,1110,Myrtle Street
-9129775,,38.03113431351982,-78.48117013573349,entire_home,Old Met #306 |  1 BR apt overlooking Downtown Mall,true,101-111,E Main Street
-9129878,,38.04001904097115,-78.46339958129269,entire_home,Nest on Locust | Stylish Downtown Villa,true,960,Locust Avenue
+9129687,,38.02969170843505,-78.47250398037842,entire_home,Pryor-Haynes House Downtown Historic Stately Home,true,1004,E Jefferson St
+9129723,,38.02387547782922,-78.47106746552043,entire_home,The Belmont Flat | Located in the popular Belmont,true,1110,Myrtle St
+9129775,,38.03113431351982,-78.48117013573349,entire_home,Old Met #306 |  1 BR apt overlooking Downtown Mall,true,101-111,E Main St
+9129878,,38.04001904097115,-78.46339958129269,entire_home,Nest on Locust | Stylish Downtown Villa,true,960,Locust Ave
 913703971262176740,,38.0209,-78.46659,entire_home,Newly renovated home in Belmont!,false,,
 914355761226534025,,38.05296,-78.50278,private_room,Excellent Location! 3 Units Near Lemon Grass Park,true,,
 914360330148803533,,38.05205,-78.50262,private_room,"Minutes from The Lawn! 2 Posh Units, Pet-Friendly",true,,
 914365621336050875,,38.05366,-78.50279,private_room,"Comfort and Convenience! Pet-Friendly, w/ Pool",true,,
 914369886657707275,,38.05222,-78.50355,private_room,"Wonderful Stay! Near Dell Tennis Courts, w/ Pool",true,,
-914564,,38.01828748526763,-78.48076537947084,entire_home,Cozy convenient home in Bellmont,true,805,Stonehenge Avenue
-919860,,38.03409695556614,-78.47739219381076,entire_home,The Recycled House - Walk Downtown,true,401,Hedge Street
+914564,,38.01828748526763,-78.48076537947084,entire_home,Cozy convenient home in Bellmont,true,805,Stonehenge Ave
+919860,,38.03409695556614,-78.47739219381076,entire_home,The Recycled House - Walk Downtown,true,401,Hedge St
 922567804315179173,,38.0379534,-78.4778362,entire_home,Comfortable North Downtown Bijou,true,,
 922611487433847958,,38.01029188523999,-78.46258737591884,entire_home,"Sonsak - Main Floor, Unit 2",true,943,Jefferson Lake Dr
 922616004282322347,,38.01029188523999,-78.46258737591884,entire_home,"Sonsak - Main Floor, Unit 4",false,943,Jefferson Lake Dr
 922617432858029484,,38.01029188523999,-78.46258737591884,private_room,"Sonsak - Lower Level, Unit 5",false,943,Jefferson Lake Dr
 923196998140144004,,38.01851240346165,-78.47364708831755,entire_home,Cozy Downtown Cottage!,false,1112,Montrose Ave
 923844180513985288,,38.02588801965208,-78.46323668462804,entire_home,"Eclectic home—quiet, pet-friendly, great location",false,1434,Chesapeake St
-9274661,,38.030313562261505,-78.5057163788603,entire_home,Adorable cottage steps from Grounds,true,513,Valley Road
-929652062185734119,,38.02400438743492,-78.47975361486651,entire_home,BelmontBNB*Modern*Luxury*near UVA/Wineries*walk2DT,true,707,Avon Street
+9274661,,38.030313562261505,-78.5057163788603,entire_home,Adorable cottage steps from Grounds,true,513,Valley Rd
+929652062185734119,,38.02400438743492,-78.47975361486651,entire_home,BelmontBNB*Modern*Luxury*near UVA/Wineries*walk2DT,true,707,Avon St
 931955681620452203,,38.015870766274176,-78.51439710235258,entire_home,The best C'ville getaway! Close to everything!,true,,
 932628091275986268,,38.03670871844824,-78.50929411777526,entire_home,Walking Distance to Rotunda - Luxury UVA Home,true,1916,Thomson Rd
 932805044743310858,,38.034728512677404,-78.49244890909047,entire_home,"Cozy Annex Min to Hospital, Walk to Amtrak",true,,
@@ -506,24 +506,24 @@ Walk Everywhere!!",true,700,Graves Street
 958951586135313453,,38.01353987966725,-78.51435840398204,entire_home,Newly Renovated Home~5min to UVA (Duplex B),true,,
 964598796048682838,380444354,38.018295151700165,-78.51310611341282,private_room,2603 Jefferson Park Avenue Airbnb,true,2603,Jefferson Park Ave
 965964089949081590,,38.02466711668878,-78.51582279200035,entire_home,Basement with the Basics - 1/2 mile to UVA,true,,
-969100575802234487,160726034,38.067589584003926,-78.50293305418897,private_room,Queen bedroom with Private bathroom,true,99,Biltmore Drive
-9704469,,38.02579461770468,-78.48003612201124,entire_home,Adorable Downtown Cottage,true,604,Belmont Avenue
+969100575802234487,160726034,38.067589584003926,-78.50293305418897,private_room,Queen bedroom with Private bathroom,true,99,Biltmore Dr
+9704469,,38.02579461770468,-78.48003612201124,entire_home,Adorable Downtown Cottage,true,604,Belmont Ave
 972551779719615360,,38.0311970615077,-78.47832849515822,entire_home,The Townie 3 BD/2BA Historic Downtown Building,false,,
-973403332642230821,,38.0243936000579,-78.47068957438508,entire_home,Basic Belmont Apt-Air Hockey -Walkable to Downtown,true,305,Chestnut Street
-974557251830997610,,38.02617012608325,-78.51754248322874,entire_home,Cavalier Cocoon: Studio + Walk to uva Grounds,true,2311,Fontaine Avenue
+973403332642230821,,38.0243936000579,-78.47068957438508,entire_home,Basic Belmont Apt-Air Hockey -Walkable to Downtown,true,305,Chestnut St
+974557251830997610,,38.02617012608325,-78.51754248322874,entire_home,Cavalier Cocoon: Studio + Walk to uva Grounds,true,2311,Fontaine Ave
 974606593178781123,,38.041393713024966,-78.50219795770913,entire_home,Home on UVA Campus! On site parking!,true,,
-974794130202491589,,38.02617012608325,-78.51754248322874,entire_home,"Fontaine Midterm: Fully Furnished, Walk to UVA",true,2311,Fontaine Avenue
+974794130202491589,,38.02617012608325,-78.51754248322874,entire_home,"Fontaine Midterm: Fully Furnished, Walk to UVA",true,2311,Fontaine Ave
 975690792140995765,,38.05174581635193,-78.49649072003263,entire_home,Private apartment in great location near UVA,true,,
 977683525893143884,,38.02127,-78.47172,entire_home,Fun sunny 2 bedroom  home in Belmont,true,,
 978139550782214361,,38.03815,-78.51077,entire_home,The Groundskeeper - Walk to UVA/JPJ/DT Mall,true,,
-98084,,38.03460334057823,-78.47956663478611,entire_home,Historic Apartment - North Downtown near Mall,true,504,1st Street N
-983927166127022738,,38.04803134994451,-78.46220897084585,entire_home,"3 Bed, 3 Bath Cute Home in Charlottesville",true,1220,Agnese Street
+98084,,38.03460334057823,-78.47956663478611,entire_home,Historic Apartment - North Downtown near Mall,true,504,1st St N
+983927166127022738,,38.04803134994451,-78.46220897084585,entire_home,"3 Bed, 3 Bath Cute Home in Charlottesville",true,1220,Agnese St
 983941603149368741,,38.0300616,-78.4805093,entire_home,DreamBird | On the DT Mall | Up to 14 Guests,true,,
 9844794,,38.03031,-78.48795,entire_home,"Modern, Light-filled Home - Family Friendly",true,,
 985544985433728728,,38.02702200584268,-78.49665345197435,entire_home,Cozy Winter Retreat: Perfect Location,true,,
 986088902067093517,,38.03485841240403,-78.49985913564699,private_room,Double Queen Guestroom at Little Mod Hotel,true,,
 986123235529847097,,38.0364,-78.49853,private_room,King Room at Little Mod Hotel,true,,
-987237184038367929,,38.07433206386674,-78.4867718801486,entire_home,House in commonwealth,true,392,Minor Ridge Road
-992067846251851012,,38.02325039054416,-78.49054260068665,entire_home,Spacious Apt 1 In Historical Building,true,752,Ridge Street
-992078227781879484,,38.02325039054416,-78.49054260068665,entire_home,Close To UVA Hospital Apt 4 In Historical Building,true,752,Ridge Street
+987237184038367929,,38.07433206386674,-78.4867718801486,entire_home,House in commonwealth,true,392,Minor Ridge Rd
+992067846251851012,,38.02325039054416,-78.49054260068665,entire_home,Spacious Apt 1 In Historical Building,true,752,Ridge St
+992078227781879484,,38.02325039054416,-78.49054260068665,entire_home,Close To UVA Hospital Apt 4 In Historical Building,true,752,Ridge St
 9985512,,38.04049,-78.46951,entire_home,"Studio Guest ""Cottage""",true,,
