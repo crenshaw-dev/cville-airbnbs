@@ -4,6 +4,7 @@ import operator
 import time
 import traceback
 
+import pandas as pd
 import requests
 
 url = "https://www.airbnb.com/api/v3/StaysSearch?operationName=StaysSearch&locale=en&currency=USD"
@@ -162,7 +163,7 @@ for rect in get_rectangle_subdivisions(rectangle_around_cville, subdivisions):
         print("sleeping a sec")
         time.sleep(0.5)
 
-CSV_ROWS = ["id", "hostId", "lat", "lon", "type", "title", "active", "street number", "street name"]
+CSV_ROWS = ["id", "hostId", "lat", "lon", "type", "title", "active", "street number", "street name", "2023 approved"]
 
 for k in data:
     # Mark everything from the API response as active
@@ -198,8 +199,27 @@ with open('data.csv', encoding='utf-8', newline='') as old_data:
 # Most listings don't have a host, but still sort by those first in case it exists.
 list_data = sorted(data.values(), key=operator.itemgetter("id", "hostId"))
 
-with open('data.csv', 'w', encoding='utf-8', newline='') as f:
-    w = csv.writer(f)
-    w.writerow(CSV_ROWS)
-    for d in list_data:
-        w.writerow([d["id"], d["hostId"], d["lat"], d["lon"], d["type"], d["title"], d["active"], d["street number"], d["street name"]])
+# Convert list_data to a pandas dataframe. All fields should be treated as strings.
+df = pd.DataFrame(list_data, columns=CSV_ROWS)
+
+# Load in the 2023_approved.csv file.
+approved_df = pd.read_csv('2023_approved.csv')
+# Set "2023 approved" to true for all rows in the approved_df.
+approved_df['2023 approved'] = True
+# First, coerce the street number to a string in both dataframes.
+df['street number'] = df['street number'].astype(str)
+approved_df['street number'] = approved_df['street number'].astype(str)
+
+# Join the two dataframes together on the street number and street name, and fill in the 2023 approved column with
+# False for any rows that don't exist in the approved_df.
+df = df.merge(approved_df, how='left', on=['street number', 'street name'], suffixes=('_delete', ''))
+# Drop the _delete column.
+df.drop(columns=['2023 approved_delete'], inplace=True)
+
+df['2023 approved'].fillna(False, inplace=True)
+
+# Convert the 2023 approved column to a lowercase string.
+df['2023 approved'] = df['2023 approved'].astype(str).str.lower()
+
+# Write the dataframe to a CSV.
+df.to_csv('data.csv', index=False)
