@@ -24,3 +24,6 @@ Listings come and go from the API results. Where the `active` column contains `t
 contained the listing. Where the `active` column is `false`, the listing was once present in the API response but is no
 longer. Some listings appear/disappear frequently. Use the "blame" feature in GitHub to view the history of a certain 
 listing.
+
+The "2023 approved" column contains "true" if the address is known to have been approved in 2023. The list of approved
+addresses is in [2023_approved.csv](2023_approved.csv). It's joined to data.csv whenever main.py is run.
