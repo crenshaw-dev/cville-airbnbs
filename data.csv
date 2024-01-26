@@ -6,7 +6,7 @@ id,hostId,lat,lon,type,title,active,street number,street name,2023 approved
 1020362793425373820,,38.02804107043091,-78.48970291410158,entire_home,Great Location,true,405,5th St SW,false
 1025402419480231876,,38.02423270656678,-78.4774767864233,entire_home,Home in Belmont,false,,,false
 1028261869280662256,,38.03996708122524,-78.500692139258,shared_room,Lovely comfy room near UVA,true,,,false
-1028482460271712262,,38.01896247022697,-78.47115358593851,entire_home,Townhouse 3 bedroom unit,true,104,Waterbury Court,false
+1028482460271712262,,38.01896247022697,-78.47115358593851,entire_home,Townhouse 3 bedroom unit,true,104,Waterbury Ct,false
 1037082994400241691,434917982,38.023638593476036,-78.5187719533725,private_room,10 Minute Walk to UVA Campus & UVA Hospital Room A,true,,,false
 1037501450937026919,434917982,38.02169154743187,-78.51889093661474,private_room,10 Minute Walk to UVA Campus & UVA Hospital Room B,true,,,false
 1037609217915441536,,38.02687,-78.51849,entire_home,"The Nook at UVa- alumni, parents, game fans!",false,,,false
@@ -139,7 +139,7 @@ Walk Everywhere!!",false,700,Graves St,true
 31568345,,38.03017,-78.46604,entire_home,"Cozy basement guest suite, 15 min walk to downtown",true,,,false
 31888613,,38.03742,-78.49267,entire_home,Your C-Ville Home Away From Home -Vacation Rental,true,,,false
 31961919,,38.01466,-78.50964,entire_home,Modern Carriage House Near UVA,true,,,false
-32156338,,38.01580386748928,-78.5104655447444,entire_home,Gorgeously Updated Home-Minutes to UVA,true,104,Oak Lawn Court,false
+32156338,,38.01580386748928,-78.5104655447444,entire_home,Gorgeously Updated Home-Minutes to UVA,true,104,Oak Lawn Ct,true
 32158190,253769,38.03604,-78.49207,private_room,Dowell Master Suite,true,,,false
 3218982,,38.04177,-78.46642,entire_home,Fabulous Terrace Level Apartment In City,true,,,false
 32683856,,38.02404,-78.47806,private_room,Guest suite w/own entrance in updated cottage,false,,,false
@@ -151,7 +151,7 @@ Walk Everywhere!!",false,700,Graves St,true
 34466238,,38.01904,-78.4955,entire_home,Sunsets Overlooking C'ville,true,,,false
 35287055,,38.0315504383731,-78.48964159497288,entire_home,Main Street Downtown Balcony Apartment,true,635,W Main St,false
 35822286,,38.04844448159471,-78.49471712595916,entire_home,"Luxury Furnished Home Near UVA, Darden, Downtown",true,104,Buckingham Rd,true
-36311511,,38.063567862699394,-78.49867419942127,entire_home,The Comfy Ranch,false,102,Inglewood Court,false
+36311511,,38.063567862699394,-78.49867419942127,entire_home,The Comfy Ranch,false,102,Inglewood Ct,false
 36521202,,38.06114,-78.46727,entire_home,22Newly furnished just completed home in the city.,true,,,false
 36834796,186023090,38.0603,-78.46691,private_room,22Newly updated Ensuite Master Bedrm in the city.,true,,,false
 36857908,186023090,38.05943,-78.46792,private_room,22Private and cozy Bedroom in the city.,true,,,false
@@ -275,7 +275,7 @@ Walk Everywhere!!",false,700,Graves St,true
 51103791,10078633,38.02737,-78.46373,private_room,Queen Room Near Downtown,true,,,false
 51120572,10078633,38.02759,-78.46372,private_room,Room with Full Bed - Walk to Downtown,true,,,false
 51147596,186023090,38.0677,-78.46714,private_room,115 Cozy bedroom in a renovated city home.,true,,,false
-51189642,,38.04222,-78.49915,entire_home,The Venable - A Gorgeous Home in the Heart of UVA,true,626,Preston Place,false
+51189642,,38.04222,-78.49915,entire_home,The Venable - A Gorgeous Home in the Heart of UVA,true,626,Preston Pl,true
 51225982,,38.05134042020064,-78.48270926671378,entire_home,The House on Rose Hill - Downtown C-Ville Living,true,1620,Rose Hill Dr,false
 51417755,,38.034515,-78.475258,entire_home,"Downtown 3 BR, just two blocks to mall w/ Hot tub",true,,,false
 51469389,,38.03998,-78.46189,entire_home,LuxuryOnLocust. 1 mile to downtown.,true,,,false
