@@ -9,7 +9,6 @@ import pandas as pd
 import geopandas as gpd
 import requests
 from matplotlib import pyplot as plt
-from folium.plugins import FloatImage
 
 url = "https://www.airbnb.com/api/v3/StaysSearch?operationName=StaysSearch&locale=en&currency=USD"
 
@@ -273,6 +272,4 @@ for coordinates in geo_df_list:
                               popup=displ_tooltip))
     i = i + 1
 
-FloatImage(image_file, bottom=0, left=86).add_to(m)
-
-m.save("cville_airbnbs.html")
+m.save("../docs/index.html")
