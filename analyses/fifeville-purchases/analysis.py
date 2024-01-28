@@ -8,6 +8,9 @@ airbnb_list = pd.read_csv('../../data.csv')
 airbnb_list.dropna(subset=['lat', 'lon', 'street number', 'street name'], inplace=True)
 airbnb_list['street name'] = airbnb_list['street name'].str.upper()
 
+# Group by street name and street number.
+airbnb_list.drop_duplicates(subset=['street name', 'street number'], inplace=True)
+
 # Load the Fifeville geojson.
 fifeville_geojson = gpd.read_file('fifeville.geojson')
 
@@ -16,13 +19,14 @@ airbnb_list_fifeville = gpd.GeoDataFrame(airbnb_list, geometry=gpd.points_from_x
 airbnb_list_fifeville = gpd.sjoin(airbnb_list_fifeville, fifeville_geojson, how='inner')
 
 # Print the number of airbnbs in Fifeville.
-print(f"Number of airbnbs in Fifeville: {len(airbnb_list_fifeville)}")
+print(f"Number of Airbnbs (by address) in Fifeville: {len(airbnb_list_fifeville)}")
 
 sales_list = pd.read_csv(sales_csv_url)
 sales_list['SaleDate'] = pd.to_datetime(sales_list['SaleDate'])
 
-# Filter down to only the most recent sale for each property.
-sales_list = sales_list.sort_values(by=['ParcelNumber', 'SaleDate'], ascending=[True, False])
+# Filter down to only the most recent sale for each property. Sort sale amount descending. If there were multiple sales
+# on the same day, use the sale with the highest sale amount (some have duplicates with a zero sale amount).
+sales_list = sales_list.sort_values(by=['ParcelNumber', 'SaleDate', 'SaleAmount'], ascending=[True, False, False])
 sales_list = sales_list.drop_duplicates(subset=['ParcelNumber'])
 
 # Filter down to only sales starting with 2000.
@@ -41,6 +45,9 @@ fifeville_sales = gpd.sjoin(sales_and_airbnb, fifeville_geojson, how='inner')
 
 # Use only the columns we care about. Address, sale date, and sale price.
 fifeville_sales = fifeville_sales[['street name', 'street number', 'SaleDate', 'SaleAmount']]
+
+# Sort by street name, then street number.
+fifeville_sales = fifeville_sales.sort_values(by=['street name', 'street number'])
 
 # Write a CSV of the sales in Fifeville.
 fifeville_sales.to_csv('fifeville-sales.csv', index=False)

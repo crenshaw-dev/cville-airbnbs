@@ -4,8 +4,12 @@ import operator
 import time
 import traceback
 
+import folium
 import pandas as pd
+import geopandas as gpd
 import requests
+from matplotlib import pyplot as plt
+from folium.plugins import FloatImage
 
 url = "https://www.airbnb.com/api/v3/StaysSearch?operationName=StaysSearch&locale=en&currency=USD"
 
@@ -223,3 +227,52 @@ df['2023 approved'] = df['2023 approved'].astype(str).str.lower()
 
 # Write the dataframe to a CSV.
 df.to_csv('data.csv', index=False)
+
+# Mapping code adapted (basically straight-up copied) from
+# https://github.com/erinleeryan/cville_airbnb/blob/fe5500c2c9236623e7ba0f8094731cdcd5f51811/mapping_code/map_cville_airbnbs.ipynb
+cville_streets = gpd.read_file('https://opendata.arcgis.com/datasets/e5a3e226dd9d4399aa014858f489852a_60.geojson')
+
+# To avoid conflicting with the GeoDataFrame's type column, rename the type column in the CSV to rental_type.
+df.rename(columns={"type": "rental_type"}, inplace=True)
+
+airbnb_to_map = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.lon, df.lat, crs="WGS84"))
+
+fig, ax = plt.subplots(figsize=(30, 30))
+cville_streets.plot(ax=ax, color='0.8')
+airbnb_to_map.plot(ax=ax, column='rental_type', legend=True, legend_kwds={'fontsize': 'x-large'})
+plt.axis('off')
+
+m = folium.Map(location=[38.03185, -78.477], zoom_start=14, tiles='cartodb positron')
+
+geo_df_list = [[point.xy[1][0], point.xy[0][0]] for point in airbnb_to_map.geometry]
+
+i = 0
+for coordinates in geo_df_list:
+    if airbnb_to_map["street number"].iloc[i] == "":
+        location = "approximate"
+        icon_type = "home"
+        type_color = "gray"
+        icon_prefix = "fa"
+    else:
+        location = f"{airbnb_to_map['street number'].iloc[i]} {airbnb_to_map['street name'].iloc[i]}"
+        if airbnb_to_map["2023 approved"].iloc[i] == "true":
+            type_color = "green"
+        else:
+            type_color = "red"
+        icon_type = "home"
+        icon_prefix = "fa"
+
+    displ_tooltip = f"""<b>Address:</b> {location}<br>
+                     <b>Type:</b> {airbnb_to_map.rental_type[i]}<br>
+                     <b>Link:</b> <a href="https://airbnb.com/rooms/{airbnb_to_map.id[i]}">
+                       https://airbnb.com/rooms/{airbnb_to_map.id[i]}
+                       </a> <br>"""
+
+    m.add_child(folium.Marker(location=coordinates,
+                              icon=folium.Icon(color=type_color, icon=icon_type, prefix=icon_prefix),
+                              popup=displ_tooltip))
+    i = i + 1
+
+FloatImage(image_file, bottom=0, left=86).add_to(m)
+
+m.save("cville_airbnbs.html")
