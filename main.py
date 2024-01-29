@@ -272,4 +272,4 @@ for coordinates in geo_df_list:
                               popup=displ_tooltip))
     i = i + 1
 
-m.save("../docs/index.html")
+m.save("docs/index.html")
