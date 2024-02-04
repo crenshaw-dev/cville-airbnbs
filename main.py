@@ -248,12 +248,13 @@ geo_df_list = [[point.xy[1][0], point.xy[0][0]] for point in airbnb_to_map.geome
 i = 0
 for coordinates in geo_df_list:
     if airbnb_to_map["street number"].iloc[i] == "":
-        location = "approximate"
+        location = f"""<a href="https://www.google.com/maps/search/{airbnb_to_map.lat.iloc[i]},{airbnb_to_map.lon.iloc[i]}">{airbnb_to_map.lat.iloc[i]},{airbnb_to_map.lon.iloc[i]} (approximate)</a>"""
         icon_type = "home"
         type_color = "gray"
         icon_prefix = "fa"
     else:
-        location = f"{airbnb_to_map['street number'].iloc[i]} {airbnb_to_map['street name'].iloc[i]}"
+        address = f"{airbnb_to_map['street number'].iloc[i]} {airbnb_to_map['street name'].iloc[i]}"
+        location = f"""<a href="https://www.google.com/maps/place/{address}+Charlottesville+VA/">{address}</a>"""
         if airbnb_to_map["2023 approved"].iloc[i] == "true":
             type_color = "green"
         else:
@@ -261,11 +262,9 @@ for coordinates in geo_df_list:
         icon_type = "home"
         icon_prefix = "fa"
 
-    displ_tooltip = f"""<b>Address:</b> {location}<br>
-                     <b>Type:</b> {airbnb_to_map.rental_type[i]}<br>
-                     <b>Link:</b> <a href="https://airbnb.com/rooms/{airbnb_to_map.id[i]}">
-                       https://airbnb.com/rooms/{airbnb_to_map.id[i]}
-                       </a> <br>"""
+    displ_tooltip = f"""<ul><li>{location}</li>
+                     <li><a href="https://airbnb.com/rooms/{airbnb_to_map.id[i]}">Listing ({airbnb_to_map.rental_type[i]})</a></li>
+                    </ul>"""
 
     m.add_child(folium.Marker(location=coordinates,
                               icon=folium.Icon(color=type_color, icon=icon_type, prefix=icon_prefix),
