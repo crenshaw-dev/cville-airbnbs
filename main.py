@@ -224,6 +224,39 @@ df['2023 approved'].fillna(False, inplace=True)
 # Convert the 2023 approved column to a lowercase string.
 df['2023 approved'] = df['2023 approved'].astype(str).str.lower()
 
+sales_csv_url = 'https://opendata.arcgis.com/api/v3/datasets/489adf140c174534a544136dc3e4cb90_3/downloads/data?format=csv&spatialRefId=4326&where=1%3D1'
+df['street name upper'] = df['street name'].str.upper()
+
+sales_list = pd.read_csv(sales_csv_url)
+sales_list['SaleDate'] = pd.to_datetime(sales_list['SaleDate'])
+
+# Filter down to only the most recent sale for each property. Sort sale amount descending. If there were multiple sales
+# on the same day, use the sale with the highest sale amount (some have duplicates with a zero sale amount).
+sales_list = sales_list.sort_values(by=['ParcelNumber', 'SaleDate', 'SaleAmount'], ascending=[True, False, False])
+sales_list = sales_list.drop_duplicates(subset=['ParcelNumber'])
+
+# Drop rows where the Unit isn't null.
+sales_list = sales_list[sales_list['Unit'].isnull()]
+
+# Drop rows where sale amount is zero.
+sales_list = sales_list[sales_list['SaleAmount'] > 0]
+
+# Drop time from the date.
+sales_list['SaleDate'] = sales_list['SaleDate'].dt.date
+
+# Merge the Airbnb list and the sales list on the street number and street name.
+df = pd.merge(df, sales_list, how='left', left_on=['street number', 'street name upper'],
+                            right_on=['StreetNumber', 'StreetName'])
+
+# Drop the street name upper column, we only needed it for the merge.
+df.drop(columns=['street name upper'], inplace=True)
+
+# Rename sale amount and sale date columns.
+df.rename(columns={'SaleDate': 'sale date', 'SaleAmount': 'sale amount'}, inplace=True)
+
+# Drop columns we don't need.
+df.drop(columns=['ParcelNumber', 'StreetNumber', 'StreetName', 'Unit', 'BookPage', 'RecordID_Int'], inplace=True)
+
 # Write the dataframe to a CSV.
 df.to_csv('data.csv', index=False)
 
@@ -262,8 +295,16 @@ for coordinates in geo_df_list:
         icon_type = "home"
         icon_prefix = "fa"
 
+    sale_item = ""
+    # If there's sale data, add it as its own list item.
+    if not pd.isna(df['sale date'].iloc[i]):
+        # Format the sale amount as currency.
+        sale_amount = "${:,.0f}".format(df['sale amount'].iloc[i])
+        sale_item = f"""<li>Last sold in {df['sale date'].iloc[i].year} for {sale_amount}</li>"""
+
     displ_tooltip = f"""<ul><li>{location}</li>
                      <li><a href="https://airbnb.com/rooms/{airbnb_to_map.id[i]}">Listing ({airbnb_to_map.rental_type[i]})</a></li>
+                     {sale_item}
                     </ul>"""
 
     m.add_child(folium.Marker(location=coordinates,
