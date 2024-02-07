@@ -2,7 +2,12 @@
 
 ## What?
 
-Information about Airbnbs in Charlottesville.
+Information about Airbnbs in Charlottesville, with a nice [map](https://crenshaw-dev.github.io/cville-airbnbs/).
+
+Map pin color key:
+* Green: address known, registered with the city for 2023
+* Red: address known, not registered with the city for 2023
+* Grey: address unknown
 
 ## Why?
 
