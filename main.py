@@ -120,9 +120,7 @@ def data_from_response(r: requests.Response) -> dict[str, dict[str, str]]:
                 "lon": result["listing"]["coordinate"]["longitude"],
                 "type": result["listing"]["roomTypeCategory"],
                 "title": result["listing"]["name"],
-                "id": result["listing"]["id"],
-                "hostId": result["listing"]["primaryHostPassport"]["userId"] if "primaryHostPassport" in result[
-                    "listing"] and result["listing"]["primaryHostPassport"] is not None else "",
+                "id": result["listing"]["id"]
             }
             for result in results["searchResults"]
             if "listing" in result and result["listing"]["city"] == "Charlottesville"
@@ -166,18 +164,20 @@ for rect in get_rectangle_subdivisions(rectangle_around_cville, subdivisions):
         print("sleeping a sec")
         time.sleep(0.5)
 
-CSV_ROWS = ["id", "hostId", "lat", "lon", "type", "title", "active", "street number", "street name", "2023 approved"]
+CSV_ROWS = ["id", "lat", "lon", "type", "title", "active", "street number", "street name", "2023 approved", "last seen"]
+
+last_seen_date = time.strftime("%Y-%m-%d")
 
 for k in data:
-    # Mark everything from the API response as active
-    data[k]["active"] = "true"
     # Give everything from the API an empty address (we'll use the one from the CSV if it's there).
     data[k]["street number"] = ""
     data[k]["street name"] = ""
     # Remove newlines from the title.
     data[k]["title"].replace("\\n", " ")
+    # Add today's date/time as a string to the data.
+    data[k]["last seen"] = last_seen_date
 
-# Load in existing CSV.
+# Load in existing CSV. This could probably be done with pandas instead.
 with open('data.csv', encoding='utf-8', newline='') as old_data:
     reader = csv.DictReader(old_data)
     for row in reader:
@@ -186,12 +186,11 @@ with open('data.csv', encoding='utf-8', newline='') as old_data:
         listing_id = row["id"]
         if listing_id in data:
             # The item in this row exists in the data we just pulled from the API, so we'll consider this listing active
-            row["active"] = "true"
+            row["last seen"] = last_seen_date
             # Also update the title, in case that has changed.
             row["title"] = data[listing_id]["title"]
             # For all other columns, we'll keep the original values. This allows us to, for example, add addresses and
             # more accurate lat/lon data without it being overwritten on the next update.
-
         else:
             # The listing was in the CSV, but not in the API responses. Mark it as inactive.
             row["active"] = "false"
@@ -199,8 +198,7 @@ with open('data.csv', encoding='utf-8', newline='') as old_data:
         data[listing_id] = row
 
 # Sort by listing ID, so we get a somewhat deterministic output.
-# Most listings don't have a host, but still sort by those first in case it exists.
-list_data = sorted(data.values(), key=operator.itemgetter("id", "hostId"))
+list_data = sorted(data.values(), key=operator.itemgetter("id"))
 
 # Convert list_data to a pandas dataframe. All fields should be treated as strings.
 df = pd.DataFrame(list_data, columns=CSV_ROWS)
@@ -223,39 +221,6 @@ df['2023 approved'].fillna(False, inplace=True)
 
 # Convert the 2023 approved column to a lowercase string.
 df['2023 approved'] = df['2023 approved'].astype(str).str.lower()
-
-sales_csv_url = 'https://opendata.arcgis.com/api/v3/datasets/489adf140c174534a544136dc3e4cb90_3/downloads/data?format=csv&spatialRefId=4326&where=1%3D1'
-df['street name upper'] = df['street name'].str.upper()
-
-sales_list = pd.read_csv(sales_csv_url)
-sales_list['SaleDate'] = pd.to_datetime(sales_list['SaleDate'])
-
-# Filter down to only the most recent sale for each property. Sort sale amount descending. If there were multiple sales
-# on the same day, use the sale with the highest sale amount (some have duplicates with a zero sale amount).
-sales_list = sales_list.sort_values(by=['ParcelNumber', 'SaleDate', 'SaleAmount'], ascending=[True, False, False])
-sales_list = sales_list.drop_duplicates(subset=['ParcelNumber'])
-
-# Drop rows where the Unit isn't null.
-sales_list = sales_list[sales_list['Unit'].isnull()]
-
-# Drop rows where sale amount is zero.
-sales_list = sales_list[sales_list['SaleAmount'] > 0]
-
-# Drop time from the date.
-sales_list['SaleDate'] = sales_list['SaleDate'].dt.date
-
-# Merge the Airbnb list and the sales list on the street number and street name.
-df = pd.merge(df, sales_list, how='left', left_on=['street number', 'street name upper'],
-                            right_on=['StreetNumber', 'StreetName'])
-
-# Drop the street name upper column, we only needed it for the merge.
-df.drop(columns=['street name upper'], inplace=True)
-
-# Rename sale amount and sale date columns.
-df.rename(columns={'SaleDate': 'sale date', 'SaleAmount': 'sale amount'}, inplace=True)
-
-# Drop columns we don't need.
-df.drop(columns=['ParcelNumber', 'StreetNumber', 'StreetName', 'Unit', 'BookPage', 'RecordID_Int'], inplace=True)
 
 # Write the dataframe to a CSV.
 df.to_csv('data.csv', index=False)
@@ -295,16 +260,8 @@ for coordinates in geo_df_list:
         icon_type = "home"
         icon_prefix = "fa"
 
-    sale_item = ""
-    # If there's sale data, add it as its own list item.
-    if not pd.isna(df['sale date'].iloc[i]):
-        # Format the sale amount as currency.
-        sale_amount = "${:,.0f}".format(df['sale amount'].iloc[i])
-        sale_item = f"""<li>Last sold in {df['sale date'].iloc[i].year} for {sale_amount}</li>"""
-
     displ_tooltip = f"""<ul><li>{location}</li>
                      <li><a href="https://airbnb.com/rooms/{airbnb_to_map.id[i]}">Listing ({airbnb_to_map.rental_type[i]})</a></li>
-                     {sale_item}
                     </ul>"""
 
     m.add_child(folium.Marker(location=coordinates,

@@ -35,10 +35,6 @@ addresses is in [2023_approved.csv](2023_approved.csv). It's joined to data.csv 
 
 ## Roadmap
 
-* Remove the sale date and price columns - they were fine for a quick analysis, but it's more code than it's worth.
-* Remove the host ID column. It isn't always present, so it's not really useful for analysis.
-* Replace the "active" column with a "last seen" column. The active value flaps a lot. A last seen date would allow us
-  to filter out old data.
 * Make it easy to swap in a different city. This would mean making the 2023_approved.csv file optional and more general.
   Maybe the approval status should be added by a separate script.
 * Make the script handle missing CSVs more gracefully. Right now the script fails if CSV isn't present.
