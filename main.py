@@ -164,7 +164,7 @@ for rect in get_rectangle_subdivisions(rectangle_around_cville, subdivisions):
         print("sleeping a sec")
         time.sleep(0.5)
 
-CSV_ROWS = ["id", "lat", "lon", "type", "title", "active", "street number", "street name", "2023 approved", "last seen"]
+CSV_ROWS = ["id", "lat", "lon", "type", "title", "street number", "street name", "2023 approved", "last seen"]
 
 last_seen_date = time.strftime("%Y-%m-%d")
 
@@ -191,9 +191,6 @@ with open('data.csv', encoding='utf-8', newline='') as old_data:
             row["title"] = data[listing_id]["title"]
             # For all other columns, we'll keep the original values. This allows us to, for example, add addresses and
             # more accurate lat/lon data without it being overwritten on the next update.
-        else:
-            # The listing was in the CSV, but not in the API responses. Mark it as inactive.
-            row["active"] = "false"
         # Either add or update the data from the API with the data from the CSV.
         data[listing_id] = row
 
