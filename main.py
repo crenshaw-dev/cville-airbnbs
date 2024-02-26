@@ -1,6 +1,7 @@
 import csv
 import json
 import operator
+import re
 import time
 import traceback
 
@@ -109,6 +110,17 @@ def get_request_body(rect: Rectangle):
                            'sha256Hash': '81c26682ee29edbbf0cd22db48b9b01b5686c4cb43f2c98758395a0cdac50700'}}}
 
 
+def rating_from_string(rating: str) -> str:
+    if rating is None:
+        return ""
+
+    match = re.search(r'\((\d+)\)$', rating)
+    if match is None or len(match.groups()) < 1:
+        return ""
+
+    return match.group(1)
+
+
 def data_from_response(r: requests.Response) -> dict[str, dict[str, str]]:
     r_json = r.json()
     try:
@@ -120,7 +132,8 @@ def data_from_response(r: requests.Response) -> dict[str, dict[str, str]]:
                 "lon": result["listing"]["coordinate"]["longitude"],
                 "type": result["listing"]["roomTypeCategory"],
                 "title": result["listing"]["name"],
-                "id": result["listing"]["id"]
+                "id": result["listing"]["id"],
+                "ratings": rating_from_string(result["listing"]["avgRatingLocalized"] if "avgRatingLocalized" in result["listing"] else None),
             }
             for result in results["searchResults"]
             if "listing" in result and result["listing"]["city"] == "Charlottesville"
@@ -164,7 +177,7 @@ for rect in get_rectangle_subdivisions(rectangle_around_cville, subdivisions):
         print("sleeping a sec")
         time.sleep(0.5)
 
-CSV_ROWS = ["id", "lat", "lon", "type", "title", "street number", "street name", "2023 approved", "last seen"]
+CSV_ROWS = ["id", "lat", "lon", "type", "title", "street number", "street name", "2023 approved", "last seen", "ratings"]
 
 last_seen_date = time.strftime("%Y-%m-%d")
 
@@ -187,8 +200,9 @@ with open('data.csv', encoding='utf-8', newline='') as old_data:
         if listing_id in data:
             # The item in this row exists in the data we just pulled from the API, so we'll consider this listing active
             row["last seen"] = last_seen_date
-            # Also update the title, in case that has changed.
+            # Also update the title and ratings, in case those have changed.
             row["title"] = data[listing_id]["title"]
+            row["ratings"] = data[listing_id]["ratings"]
             # For all other columns, we'll keep the original values. This allows us to, for example, add addresses and
             # more accurate lat/lon data without it being overwritten on the next update.
         # Either add or update the data from the API with the data from the CSV.
