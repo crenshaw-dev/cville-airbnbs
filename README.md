@@ -38,3 +38,8 @@ addresses is in [2023_approved.csv](2023_approved.csv). It's joined to data.csv 
 * Make it easy to swap in a different city. This would mean making the 2023_approved.csv file optional and more general.
   Maybe the approval status should be added by a separate script.
 * Make the script handle missing CSVs more gracefully. Right now the script fails if CSV isn't present.
+* Get date of most recent review, so we have a sense of whether the listing is active.
+* Note in data whether the listing falls in a zoning area that requires registration. (This may be difficult if we don't have GIS data for the new zoning areas yet.)
+* Generate a human-readable report from the data.
+* Add arbitrary "notes" column.
+* Generate a report describing single addresses with multiple listings.
