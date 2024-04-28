@@ -1,3 +1,4 @@
+import base64
 import csv
 import json
 import operator
@@ -110,6 +111,12 @@ def get_request_body(rect: Rectangle):
                            'sha256Hash': '81c26682ee29edbbf0cd22db48b9b01b5686c4cb43f2c98758395a0cdac50700'}}}
 
 
+def get_listing_request_url(listing_id: str):
+    id = ("StayListing:" + listing_id).encode('ascii')
+    id = base64.b64encode(id).decode('ascii')
+    return 'https://www.airbnb.com/api/v3/StaysPdpSections/036017be486462ae7b1e9d9916e4dea14951cf33a75c242b92d267b468d97bfd?operationName=StaysPdpSections&locale=en&currency=USD&variables={"id":"' + id + '","pdpSectionsRequest":{"adults":"1","amenityFilters":null,"bypassTargetings":false,"categoryTag":null,"causeId":null,"children":null,"disasterId":null,"discountedGuestFeeVersion":null,"displayExtensions":null,"federatedSearchId":null,"forceBoostPriorityMessageType":null,"infants":null,"interactionType":null,"layouts":["SIDEBAR","SINGLE_COLUMN"],"pets":0,"pdpTypeOverride":null,"photoId":null,"preview":false,"previousStateCheckIn":null,"previousStateCheckOut":null,"priceDropSource":null,"privateBooking":false,"promotionUuid":null,"relaxedAmenityIds":null,"searchId":null,"selectedCancellationPolicyId":null,"selectedRatePlanId":null,"splitStays":null,"staysBookingMigrationEnabled":false,"translateUgc":null,"useNewSectionWrapperApi":false,"sectionIds":null,"checkIn":null,"checkOut":null,"p3ImpressionId":"p3_1714337066_efTKaazDV6pyCgEf"}}&extensions={"persistedQuery":{"version":1,"sha256Hash":"036017be486462ae7b1e9d9916e4dea14951cf33a75c242b92d267b468d97bfd"}}'
+
+
 def rating_from_string(rating: str) -> str:
     if rating is None:
         return ""
@@ -177,7 +184,8 @@ for rect in get_rectangle_subdivisions(rectangle_around_cville, subdivisions):
         print("sleeping a sec")
         time.sleep(0.5)
 
-CSV_ROWS = ["id", "lat", "lon", "type", "title", "street number", "street name", "2023 approved", "last seen", "ratings"]
+
+CSV_ROWS = ["id", "lat", "lon", "type", "title", "street number", "street name", "2023 approved", "last seen", "ratings", "host id"]
 
 last_seen_date = time.strftime("%Y-%m-%d")
 
@@ -207,6 +215,23 @@ with open('data.csv', encoding='utf-8', newline='') as old_data:
             # more accurate lat/lon data without it being overwritten on the next update.
         # Either add or update the data from the API with the data from the CSV.
         data[listing_id] = row
+
+        # If the listing doesn't have a host ID, we'll add it to the data.
+        if "host id" not in data[listing_id] or data[listing_id]["host id"] == "":
+            listing_url = get_listing_request_url(listing_id)
+            r = requests.get(listing_url, headers=headers)
+            listing_data = r.json()
+
+            if listing_data["data"]["presentation"]["stayProductDetailPage"]["sections"] is not None:
+                sections = listing_data["data"]["presentation"]["stayProductDetailPage"]["sections"]["sbuiData"]["sectionConfiguration"]["root"]["sections"]
+                for section in sections:
+                    if section["sectionId"] == "HOST_OVERVIEW_DEFAULT":
+                        host_id = section["loggingData"]["eventData"]["pdpContext"]["hostId"]
+                        break
+                data[listing_id]["host id"] = host_id
+            # Sleep for a bit to avoid rate limiting.
+            print("got host ID, sleeping a sec")
+            time.sleep(0.1)
 
 # Sort by listing ID, so we get a somewhat deterministic output.
 list_data = sorted(data.values(), key=operator.itemgetter("id"))
