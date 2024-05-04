@@ -185,7 +185,7 @@ for rect in get_rectangle_subdivisions(rectangle_around_cville, subdivisions):
         time.sleep(0.5)
 
 
-CSV_ROWS = ["id", "lat", "lon", "type", "title", "street number", "street name", "2023 approved", "last seen", "ratings", "host id"]
+CSV_ROWS = ["id", "lat", "lon", "type", "title", "street number", "street name", "2023 approved", "last seen", "ratings", "host id", "host name"]
 
 last_seen_date = time.strftime("%Y-%m-%d")
 
@@ -216,19 +216,29 @@ with open('data.csv', encoding='utf-8', newline='') as old_data:
         # Either add or update the data from the API with the data from the CSV.
         data[listing_id] = row
 
-        # If the listing doesn't have a host ID, we'll add it to the data.
-        if "host id" not in data[listing_id] or data[listing_id]["host id"] == "":
+        # If the listing doesn't have a host ID or name, we'll add it to the data.
+        if "host id" not in data[listing_id] or data[listing_id]["host id"] == "" or "host name" not in data[listing_id] or data[listing_id]["host name"] == "":
             listing_url = get_listing_request_url(listing_id)
             r = requests.get(listing_url, headers=headers)
             listing_data = r.json()
 
             if listing_data["data"]["presentation"]["stayProductDetailPage"]["sections"] is not None:
-                sections = listing_data["data"]["presentation"]["stayProductDetailPage"]["sections"]["sbuiData"]["sectionConfiguration"]["root"]["sections"]
-                for section in sections:
-                    if section["sectionId"] == "HOST_OVERVIEW_DEFAULT":
-                        host_id = section["loggingData"]["eventData"]["pdpContext"]["hostId"]
-                        break
-                data[listing_id]["host id"] = host_id
+                # Only update if it hasn't been set yet.
+                if "host id" not in data[listing_id] or data[listing_id]["host id"] == "":
+                    sections = listing_data["data"]["presentation"]["stayProductDetailPage"]["sections"]["sbuiData"]["sectionConfiguration"]["root"]["sections"]
+                    for section in sections:
+                        if section["sectionId"] == "HOST_OVERVIEW_DEFAULT":
+                            host_id = section["loggingData"]["eventData"]["pdpContext"]["hostId"]
+                            break
+                    data[listing_id]["host id"] = host_id
+
+                if "host name" not in data[listing_id] or data[listing_id]["host name"] == "":
+                    sections = listing_data["data"]["presentation"]["stayProductDetailPage"]["sections"]["sections"]
+                    for section in sections:
+                        if section["sectionId"] == "MEET_YOUR_HOST":
+                            host_name = section["section"]["cardData"]["name"]
+                            break
+                    data[listing_id]["host name"] = host_name
             # Sleep for a bit to avoid rate limiting.
             print("got host ID, sleeping a sec")
             time.sleep(0.1)
