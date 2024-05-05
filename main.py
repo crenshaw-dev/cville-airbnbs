@@ -185,7 +185,7 @@ for rect in get_rectangle_subdivisions(rectangle_around_cville, subdivisions):
         time.sleep(0.5)
 
 
-CSV_ROWS = ["id", "lat", "lon", "type", "title", "street number", "street name", "2023 approved", "last seen", "ratings", "host id", "host name"]
+CSV_ROWS = ["id", "lat", "lon", "type", "title", "street number", "street name", "2023 approved", "last seen", "ratings", "host id", "host name", "owner name", 'count by host id', 'count by owner name', "comments"]
 
 last_seen_date = time.strftime("%Y-%m-%d")
 
@@ -267,6 +267,41 @@ df['2023 approved'].fillna(False, inplace=True)
 
 # Convert the 2023 approved column to a lowercase string.
 df['2023 approved'] = df['2023 approved'].astype(str).str.lower()
+
+# Download CSV of parcels and owners
+parcels = pd.read_csv('https://opendata.arcgis.com/api/v3/datasets/0e9946c2a77d4fc6ad16d9968509c588_72/downloads/data?format=csv&spatialRefId=4326&where=1%3D1')
+
+# Remove columns where the Unit field is not null, we don't match to that granularity.
+parcels = parcels[parcels['Unit'].isnull()]
+
+# Add column of uppercase street names to listings
+df['street name upper'] = df['street name'].str.upper()
+
+# Join parcels and listings on street name upper and street number, keeping all listings.
+df = pd.merge(df, parcels, how='left', left_on=['street number', 'street name upper'], right_on=['StreetNumber', 'StreetName'])
+
+# If there's an & in the OwnerName, remove everything except the part before the " &"
+df['OwnerName'] = df['OwnerName'].str.replace(r'(.+) & .+', r'\1', regex=True)
+
+# If there's a "Last, First <initial>" followed by a space and then the exact same pattern, remove the second pattern.
+# We'll assume that's two names.
+df['OwnerName'] = df['OwnerName'].str.replace(r'(\w+), (\w+ \w{2,}) (\w+), (\w+ \w{2,})', r'\1, \2', regex=True)
+
+# If OwnerName follows the pattern "LAST, FIRST <initial>", then convert it to "First Last", capitalizing only the first letter of the first name and last name
+df['owner name'] = df['OwnerName'].str.replace(r'^(\w+), (\w+( \w{2,})?)( [A-Z])?(, JR)?$', r'\2 \1', regex=True).str.title()
+
+# If the OwnerName ends with " Llc", replace it with " LLC"
+df['owner name'] = df['owner name'].str.replace(r' Llc$', ' LLC', regex=True)
+
+# Set the "owner" column to the "OwnerName" column, but only if the "owner" column is null. We don't want to overwrite any existing owner names.
+df['owner name'] = df['owner name'].fillna(df['OwnerName'])
+
+# Count the number of listings by host ID and owner name.
+df['count by host id'] = df[df['host id'].notna() & (df['host id'] != '')].groupby('host id')['host id'].transform('count')
+df['count by owner name'] = df[df['owner name'].notna() & (df['owner name'] != '')].groupby('owner name')['owner name'].transform('count')
+
+# Drop all but these columns.
+df = df[CSV_ROWS]
 
 # Write the dataframe to a CSV.
 df.to_csv('data.csv', index=False)
