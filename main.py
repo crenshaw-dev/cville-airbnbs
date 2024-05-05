@@ -222,7 +222,8 @@ with open('data.csv', encoding='utf-8', newline='') as old_data:
             r = requests.get(listing_url, headers=headers)
             listing_data = r.json()
 
-            if listing_data["data"]["presentation"]["stayProductDetailPage"]["sections"] is not None:
+            detail_page = listing_data["data"]["presentation"]["stayProductDetailPage"]
+            if "sections" in detail_page and detail_page["sections"] is not None:
                 # Only update if it hasn't been set yet.
                 if "host id" not in data[listing_id] or data[listing_id]["host id"] == "":
                     sections = listing_data["data"]["presentation"]["stayProductDetailPage"]["sections"]["sbuiData"]["sectionConfiguration"]["root"]["sections"]
